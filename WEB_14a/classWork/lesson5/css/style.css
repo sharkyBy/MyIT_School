@@ -1,0 +1,328 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+    color: blue;
+    font-size: 16px;
+    }
+
+header{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 10vh;  
+    z-index: 10;  
+}
+
+
+.logo{
+    position: relative;
+    width: 100%;
+    height: 10vh;    
+    opacity: 1; /*Прозрачность фона от 0 до 1*/
+    background: linear-gradient(to bottom right, rgb(0, 89, 255), white ,rgba(255, 51, 0, 0.87) );
+  
+   
+   
+}
+
+.logo img{
+    position: fixed;
+    top: 0vh;
+    height: 128px;
+    width: 128px;
+    
+    border-radius: 64px 64px;
+    background-size: contain;
+    left: 10vh;
+    z-index: 2;
+   
+}
+
+main{
+    background: url(../img/img.jpg);
+    background-size: contain;
+    z-index: 0;
+}
+
+.title{
+    display: flex;
+    position: sticky;    /*"Липкая" позиция. Не работает без задания позиции останова (границы приклеивания)*/
+    top:0;
+    margin-bottom: 7%;
+    width: 100%;
+    height: 12vh;
+    background:linear-gradient( to bottom left, rgba(255, 51, 0, 0.87) , white , rgb(0, 89, 255)) ;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+   
+}
+
+.main-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 1200px;
+    /* border: 5px solid black; */
+     z-index: 2;
+     
+}
+.wrap{
+    display: block;
+    width: 40%;
+    height: 120vh;
+    border: 1px solid rgb(212, 224, 236);
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   
+}
+
+.wrapper1{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    /* border: 1px solid rgb(212, 224, 236); */
+   
+
+}
+
+.logo1, .logo2{
+    display: flex;
+    position: absolute;
+    left: calc(50% - 10vh / 2);
+    top:calc(0% - 10vh / 2);
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 5vh;
+    background:linear-gradient(to bottom right, rgb(255, 51, 0) , white , rgb(0, 89, 255));
+}
+
+
+.item1, .item2{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border: 1px solid rgb(212, 224, 236);
+
+}
+
+.item1 {   
+    background: url(../img/frontView.jpg) center center;
+    background-size: cover;
+  
+}    
+
+.item1:hover{
+    background:url(../img/sideView.jpg) center center ;
+    background-size: cover;
+    transition: 0.5s ease;    
+   
+}
+
+.item1:active{
+    background:url(../img/backView.jpg) center center ;
+    background-size: cover;
+    transition: 0.5s ease;  
+}
+
+.item2-1{
+    width: 80%;
+    height: 20%;
+    border: 1px dashed gray;
+    border-radius: 2vh;
+    background-color: rgb(250, 250, 250);
+}
+.item2-1 h2{
+    font-size: 1.2em;
+    padding: 0.5em;
+    
+}
+
+.item2-2{
+    position: relative;
+    width: 80%;
+    height: 60%;
+    border: 1px dashed gray;
+    padding: 0.5em;
+    border-radius: 2vh;
+    background-color: rgb(250, 250, 250);
+}
+
+.item2-2 span{
+    position: absolute;
+    top: 80%;
+    right: 7%;
+    
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+
+.wrapper2{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    /* border: 1px solid blue; */
+    width: 100%;
+    height: 50vh;
+    margin-top: 20%;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+   
+}
+
+.item3-4-wrap{
+    display: block;
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid rgb(212, 224, 236); */
+    background-color: rgb(250, 250, 250);
+}
+
+.item3{
+    width: 100%;
+    height: 80%;
+    border: 1px  solid rgb(212, 224, 236);
+
+}
+.item4{
+   
+    width: 100%;
+    height: 20%;
+    border: 1px solid rgb(212, 224, 236); 
+}
+
+.item5{
+   display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+    border: 1px solid rgb(212, 224, 236);
+}
+/* 
+.logo2{
+    display: flex;
+    position: absolute;
+    left: calc(50% - 10vh/2);
+    top:calc(0% - 10vh/2);
+    justify-content: center;
+    align-items: center;
+    width: 10vh;
+    height: 10vh;
+    border-radius: 5vh;
+    background:linear-gradient(to bottom right, rgb(255, 51, 0) , white , rgb(0, 89, 255) );
+   } */
+
+
+
+
+.logo1:hover, .logo2:hover{
+    transition: 1s;
+    transform:rotate(360deg);
+ 
+}
+.item5-1{
+    display: flex;
+    width: 80%;
+    height: 20%;
+    border: 1px dashed gray;
+    border-radius: 2vh;
+    background-color: rgb(250, 250, 250);
+}
+
+.item5-2{
+    width: 80%;
+    height: 60%;
+    border: 1px dashed gray;
+    border-radius: 2vh;
+    background-color: rgb(250, 250, 250);
+}
+.wrap2{
+display: block;
+width: 40%;
+height: 120vh;
+border: 1px solid rgb(212, 224, 236); 
+
+ box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22); 
+
+}
+
+ .chatter{
+    display:block;
+    width: 100%;
+    height:120vh;
+    list-style: none;
+    overflow-y: scroll;
+    
+} 
+
+.chatter li{
+    display:inline-block;
+    position: relative; 
+    width: calc(70% - 2*5px);
+    padding: 5px;
+    overflow-wrap: break-word;
+    height: auto;
+    min-height: 5vh;
+    border: 1px dashed gray;
+    border-radius: 15px;
+    background: rgb(223, 233, 247)
+}
+
+.chatter li:nth-child(2n){
+   position: relative;
+   left:31%;
+   background: rgb(243, 226, 218);
+       
+}
+
+.chatter li span{
+    float: right;
+   color: rgb(153, 147, 147)
+}
+
+.chatter li .name{
+    float: left;
+   color: rgb(21, 134, 55)
+}
+
+.container{
+    display: flex;
+    align-items: center;  
+    justify-content: flex-end;
+    height: 10vh;
+    width: 100%;
+  
+   
+    
+}
+.container div span{
+    display: flex;
+    position: relative;
+    padding: 4vh;
+    font-size: 2.5vh;
+   
+}
+
+.container div img{
+    display: flex;
+    position: relative;
+    height: 128px;
+    width: 128px;
+}
+
+.container div img:hover{
+    transform: rotate(720deg);
+    transition: 1s;
+}
+

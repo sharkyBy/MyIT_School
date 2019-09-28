@@ -1,0 +1,146 @@
+    Основные свойства CSS
+
+//Синтаксис:
+
+//For class
+.Selector {
+    properties: value value ... value;
+    properties: value;
+    properties: value;
+    }
+
+//For id 
+#Selector {
+    properties: value value ... value;
+    properties: value;
+    properties: value;
+    }
+
+//For Object
+Selector {
+    properties: value value ... value;
+    properties: value;
+    properties: value;
+    }
+
+
+
+Раздел 1. Позиционирование и размеры селекторов
+
+margin (top,rigth,bottom,left)
+padding (top,rigth,bottom,left)
+float (left, rigth,none)
+flex (flex-grow, flex-shrink, flex-basic)
+width:CSS units | % | none | inherit - шиирна
+height - высота
+min(max)-width:CSS units | % | none | inherit
+min(max)-height:CSS units | % | none | inherit
+
+
+Раздел 2. Текст
+// Шрифты с засечками на концах - serif;
+// Шрифты без засечек на концах - sana-serif;
+
+color
+font-size: CSS units
+font-family
+font-style - курсив
+font-weight - жирность
+text-align (left, right, center, justify - на всю ширину) - положение текста
+line-height - межстрочный интервал
+text-indent - задание красной строки
+vertical-align (top, bottom, middle) - выравнивание по высоте
+padding (top, right, bottom, left) //Важно! Свойство добавляет установленные отступы к установденному размеру элемента
+
+
+Раздел 3. Ссылки 
+
+text-decoration (default - underline, none, overline,line-through)
+
+//Псевдоклассы для ссылок
+:hover - состояние наведения курсора на ссылку
+:link - отслеживание непосещенной ссылки
+:visited - отслеживание посещенной ссылки
+: active - отслеживание нажатой, но не отпущенной ссылки
+//Псевдоклассы наследуют свойства друг от друга.
+//Важна очередность размещения псевдоклассов
+//Порядок задания:  :link, :visited, :hover, :active
+
+
+Раздел 4. Границы блоков
+
+border (width, color, style) - граница
+border-width - толщина
+border-color - цвет
+border-radius (10px 20px 30px 40px - значения: лево верх, право верх, право низ, лево низ)
+border-style (dotted, solid,dashed, groove, ridge, double,inset, outset)
+border-left (width, color, style)
+border-right (width, color, style)
+
+Раздел 5. Фон блока
+
+background -color (red; #FF0000; 255,0,0)
+           -image (url("image.png"))
+           -repeat (no-repeat, repeat-x, repeat-y)
+           -position (по оси Х - 0px(%) or(left, right, center)   по оси Y - 0px(%) or (top, bottom, center))
+           -attachment (fixed, scrool) прокрутка фона
+background (color,image,repeat,position,attachment)
+
+Раздел 6. Свойства для маркеров списков (ul, ol)
+
+list-style-type  -(square, circle, disk, none) - for <ul>
+                 -(lower(upper)-roman, lower(upper)-alpha, lower-greek,decimal,armenian,georgian,decimal-leading-zero)
+list-style-image (url("li.gif")) - маркер в виде заданной картинки
+list-style-position (outside - default, inside)
+list-style (type, image, position) - Одновременное задание свойств
+
+Раздел 7. Свойство display для строчных и блочных элементов
+
+//По умолчанию блочные элементы занимают всю ширину вне зависимости от содержимого
+// и выстраиваются в столбцы сверху вниз.
+//Строчные элементы имеют ширину по содержимому и выстраиваются
+//в строку слева на право
+//Свойство display дает возможность изменять этот порядок.
+
+display: block - элементы занимают ширину "родителя" и выстраиваются в столбец
+display: inline - элементы получают ширину по содержимому и выстраиваются в строку слева на право
+display: inline-block - элемент находится в строке, но при этом имеет важные свойства блока
+display: none - не отображает элемент
+display: table - для таблицы целиком
+display: table-row
+         table-cell
+         table-column
+         table-row-group
+         table-column-group
+         table-header-group
+         table-footer-group
+         table-caption
+
+Раздел 8. Свойство float, clear
+
+//При применении этого свойства происходит следующее:
+
+//Элемент позиционируется как обычно, а затем вынимается из документа потока и сдвигается влево (для left) или вправо (для right) до того как коснётся либо границы родителя, либо другого элемента с float.
+//Если пространства по горизонтали не хватает для того, чтобы вместить элемент, то он сдвигается вниз до тех пор, пока не начнёт помещаться.
+//Другие непозиционированные блочные элементы без float ведут себя так, как будто элемента с float нет, так как он убран из потока.
+//Строки (inline-элементы), напротив, «знают» о float и обтекают элемент по сторонам.
+//Ещё детали:
+
+//Элемент при наличии float получает display:block.
+
+//То есть, указав элементу, у которого display:inline свойство float: left/right, мы автоматически сделаем его блочным. В частности, для него будут работать width/height.
+
+//Исключением являются некоторые редкие display наподобие inline-table и run-in (см. Relationships between „display“, „position“, and „float“)
+
+//Ширина float-блока определяется по содержимому. («CSS 2.1, 10.3.5»).
+
+//Вертикальные отступы margin элементов с float не сливаются с отступами соседей, в отличие от обычных блочных элементов.
+
+Синтаксис
+Float: left | right | none | inherit;
+
+Синтаксис:
+
+clear: left | right | both;
+//Применение этого свойства сдвигает элемент вниз до тех пор, пока
+// не закончатся float'ы слева/справа/с обеих сторон.

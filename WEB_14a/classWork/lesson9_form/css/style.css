@@ -1,0 +1,180 @@
+*{
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+  
+
+}
+header{
+    width: 60%;
+    height: 40px;
+    margin-left: 20%;
+   text-align: center;
+
+}
+main{
+    width: 100%;
+    height:900px;
+
+}
+form{
+    display: block;
+    width: 60%;
+    height:90%;
+    margin-left: 20%;
+    border: 2px solid rgb(195, 195, 245);
+    border-radius: 20px;
+    box-shadow:5px -5px 20px 6px  rgb(97, 124, 175,0.3), -5px 5px 20px 6px  rgb(97, 124, 175,0.3) ;
+    background:linear-gradient(16deg, rgba(0,205,180,.6) 0%, rgba(89,174,191,0.6) 51%, rgba(5,130,247,0.6) 100%);
+
+}
+.contactInfo, .personalInfo{
+    width: 96%;
+    height: 25%;
+    margin: 2% 0 0  2%;
+    border-radius: 10px;
+    border:1px solid rgb(127, 127, 218);
+    
+}
+
+.assessmentInfo{
+    width: 96%;
+    height:40%;    
+    margin: 2% 0 0  2%;
+    border-radius: 10px;
+    border:1px solid rgb(127, 127, 218);
+    
+}
+
+.radio1,.radio2{
+    display: flex;
+    flex-direction: column;  
+  
+       
+}
+
+span{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(92, 94, 93);
+    font-style: italic;
+}
+
+.radio1 label, .radio2 label{
+
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(18, 9, 151)
+}
+
+.radio1{
+    height: auto;
+}
+
+.radio2{
+    height:auto;
+}
+
+.contact, .personal, .assessment {
+    width: auto;
+    height:95%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+        
+}
+
+.contact label, .personal label{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: rgb(18, 9, 151);
+    
+}
+
+.assessment label{
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    
+}
+
+.contact input, .personal input, .personal select{
+    
+    width: 40%;
+    
+}
+
+legend{
+    font-style: italic;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    left: 493px;
+    width: 30%;
+    height:auto;
+   
+
+}
+
+
+input, select{
+    height: 30px;
+    vertical-align: middle;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 2px rgb(97, 124, 175,1);
+    outline-style: none;
+    
+}
+
+.contact input{
+    font-size: 14px;
+}
+
+.radio1 input, .radio2 input{
+    box-shadow: none;
+}
+
+textarea{
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 2px rgb(97, 124, 175,1);
+    outline-style: none;
+}
+input[type="reset"], input[type="submit"]{
+    
+    font-weight: bold;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    height: 32px;
+    background:linear-gradient(16deg, rgba(0,205,180,.6) 0%, rgba(89,174,191,0.5) 51%, rgba(5,130,247,0.5) 100%);
+    cursor: pointer;
+    /* animation: pulse 1.0s linear; */
+   
+}
+
+/*Анимация кнопок*/
+
+input[type="reset"]:hover, input[type="submit"]:hover{
+    border:1px solid rgb(54, 67, 185);
+    /* transform: translate3d(-2px, -2px, -5px);
+    transition:0.5s all ease-in-out; */
+    /* background: linear-gradient(127deg, rgba(3,164,175,1) 0%, rgba(1,255,199,1) 100%); */
+    animation: pulse 1.0s ease-in-out;
+}
+
+@keyframes pulse {
+    0%{transform: scale(1);
+    opacity: 1;
+}
+  
+    50%{transform: scale(0.8);
+        opacity:0.6}
+    
+    100%{transform: scale(1);
+    opacity: 1;}
+}  

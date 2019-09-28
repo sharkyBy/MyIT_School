@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <table>
+        
+        <caption>Урок 6. Применение псевдоклассов (...-child) и комбинаторов ("+, ~")</caption>
+        <tr><th colspan="4">Таблица свойств, применяемых к ячейкам</th></tr>
+        <tr>
+            <th>№ п/п</th>
+            <th>Наименование</th>
+            <th>Примечание</th>
+            <th>Ссылки</th>
+        </tr>
+        
+        <tr>
+            <td>1. Применение цвета и размера шрифта к ячейке (1;1). Цвет "тип 1".</td>
+            <td>Применение цвета и размера шрифта к первой строке. Цвет "тип 3". </td>
+            <td>Background-color; font-size; color</td>
+            <td><a href="https://developer.mozilla.org/ru/docs/Web/CSS/background" target="_blank" title="background">Background</a></td>
+        </tr>
+        <tr>
+            <td>2. Применение цвета и размера шрифта к ячейке (1;2). Цвет "тип 2".</td>
+            <td>Применение цвета и размера шрифта ко второй строке. Цвет "тип 4".</td>
+            <td>selector:first-child; selector:last-child; selector:nth-child()</td>
+            <td><a href="https://developer.mozilla.org/ru/docs/Web/CSS/:nth-child" target="_blank" title=":nth-child(">:nth-child()</a>
+            <a href="https://developer.mozilla.org/ru/docs/Web/CSS/:first-child" target="_blank" title=":first-childe">:first-child</a>
+            <a href="https://developer.mozilla.org/ru/docs/Web/CSS/:last-child" target="_blank" title=":last-child">:last-child</a>
+            </td>
+        </tr>
+        <tr>
+            <td>3. Применение цвета и размера шрифта к ячейке (1;3). Цвет "тип 1".</td>
+            <td>Применение цвета и размера шрифта к третей строке. Цвет "тип 5".</td>
+            <td>Комбинаторы: ("+""; "~" " " ">"). Syntax:  selector + (~) selector</td>
+            <td><a href="https://developer.mozilla.org/ru/docs/Web/CSS/Adjacent_sibling_combinator" target="_blank" title="Combinator '+'">Комбинатор '+'</a>
+                <a href="https://developer.mozilla.org/ru/docs/Web/CSS/General_sibling_combinator" target="_blank" title="Combinator '~'">Комбинатор '~'</a>
+                <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Child_combinator" target="_blank" title="Combinator '>'">Комбинатор '>'</a>
+                <a href="https://developer.mozilla.org/ru/docs/Web/CSS/Descendant_combinator" target="_blank" title="Combinator ' '">Комбинатор ' '</a>
+                <a href="https://schoolsw3.com/css/css_combinators.php" target="_blank" title="All combinators" >Все комбинаторы</a>
+            </td>
+        </tr>
+        <tr>
+            <td>4. Применение цвета и размера шрифта к ячейке (1;4). Цвет "тип 2".</td>
+            <td>Применение цвета и размера шрифта к четвертой строке. Цвет "тип 4".</td>
+            <td>Специфичность селекторов (0.0.0.0)</td>
+            <td><a href="https://specifishity.com/" target="_blank" title="Selector Specificity">Специфичность селекторов</a></td>
+        </tr>
+        <tr>
+            <td>5. Применение цвета и размера шрифта к ячейке (1;5). Цвет "тип 1".</td>
+            <td>Применение цвета и размера шрифта к пятой строке. Цвет "тип 5".</td>
+            <td>HTML-таблицы. Свойства, атрибуты</td>
+            <td><a href="https://html5book.ru/html-table/" target="_blank" title="Table">Таблица</a>
+                
+            </td>
+        </tr>
+        <tr>
+            <td>6. Применение цвета и размера шрифта к ячейке (1;6). Цвет "тип 2"</td>
+            <td>Применение цвета и размера шрифта к шестой строке. Цвет "тип 6".</td>
+            <td>Список ссылок на источники смотри там >>>>></td>
+            <td><a href="https://developer.mozilla.org/ru/docs/Learn" target="_blank" title="Mozila">Mozila</a>
+            <a href="https://html5book.ru/" target="_blank" title="HTML5 book">HTML5 Book</a>
+            <a href="https://html5css.ru/" target="_blank" title="HTML5 css">HTML5 CSS</a>
+            <a href="https://colorscheme.ru/html-colors.html" target="_blank" title="colors">Цвета</a>
+            <a href="https://specifishity.com/" target="_blank" title="Specificity">Специфичность селекторов</a>
+            
+            </td>
+        </tr>
+
+
+    </table>
+
+    
+</body>
+</html>

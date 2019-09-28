@@ -1,0 +1,717 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height:200vh;
+
+}
+
+main{
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    height: auto;
+    /* border-right: 6px solid gray;
+    border-top: 3px solid gray; */
+    border-width: 3px 10px 3px 3px;
+    border-style: solid;
+    border-color: gray;
+
+}
+
+
+
+.phone-picture{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    text-align: center;
+    background-color: rgb(238, 238, 238);
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    background-image: url(../img/img1.jpg);
+}
+
+.title{
+    display: flex;
+    position: relative;
+    width: 40%;
+    left: 30%;
+    flex-direction: column;
+   /* border:  4px solid black; */   
+   text-align: center;
+   list-style: none;
+
+}
+.heading{
+    position: relative;
+    top: 30%;
+    font-size: 60pt;
+    text-transform: uppercase;
+    font-weight: bold; 
+/* border: 3px solid blue; */
+}
+
+.inscription{
+    position: relative;
+    top: 30%;
+    font-size: 14pt;
+    text-transform: uppercase;
+    font-weight: bold;  
+    /* border: 3px solid purple; */
+
+}
+
+.circle1, .circle2{
+    position: absolute;
+    width: 10vh;
+    height: 5vh;
+    left:72vh;
+    margin-top: -0.4vh;
+    border: 2px solid gray;
+    border-radius:0 0 5vh 5vh;
+    background: gray;
+    
+
+}
+
+.circle2{
+    left:90vh;
+       
+}
+
+.logo1{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    height: 30vh;
+    width: auto;
+    /* border: 2px solid rgb(69, 62, 172); */
+}
+.block1{
+    display: flex;
+    position: relative;
+    height: 30vh;
+    width: 40%;
+    transform-origin: left top;/*Задаем точку, относительно которой выполняем поворот*/
+    transform: rotate(-5deg);/*Задаем угол поворота*/
+    background: white;
+    z-index: 1;/*Способность наложения элементов один на другой. Работает с position:absolut,
+    relative, fixed. Чем выше значение тем выше приоритет элемента. Более высокий приоритет
+    накладывается на более низкий*/
+       /* border: 2px solid pink; */
+
+}
+.picture1{
+    display: inline-flex;
+    position: relative;
+    height: 100%;
+    width: 50%;
+    /* border: 2px solid red; */
+    background-image: url("../img/img2.jpg");
+    background-size: cover;
+}
+
+.text1{
+    display: inline-flex;    
+    position: relative;
+    height: 100%;
+    width:50%; 
+    align-items: center;
+    /* border: 2px solid rgb(55, 0, 255);  */
+       
+}
+
+.text1 ul{
+    list-style: none;   
+    
+}
+
+.text1 h3{
+    font-size: 4vh;
+    font-weight: bold;
+    padding-left: 30px;    
+
+}
+
+.text1 span{
+    font-size: 1.3vh;
+    font-weight: bold;
+    padding-left: 30px;
+  
+
+    
+}
+
+.text1 p{
+    font-size: 0.9vh; 
+    padding-left: 30px;
+    
+}
+
+.block2{
+    display: flex;
+    position: absolute;
+    left:30%; 
+    height: 100%;
+    width: 40%;
+    /* border: 2px solid rgb(26, 24, 156); */
+    list-style: none;
+    font-size: 0.7vh;
+    line-height: 2vh;
+    z-index: auto;
+}
+
+.text2 {    
+    display: flex;    
+    position: relative;
+    padding-top: 2%;
+    height: 96%;
+    width:50%; 
+    /* border: 2px solid rgb(255, 102, 0);   */
+    background-color: black;
+    color: rgb(175, 169, 169);
+}
+
+.text2 h6{
+    display: block;
+    position: relative;
+    text-align: center;
+    font-size: 1.5em;
+    
+}
+
+.text2-text{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+  
+}
+
+.picture2{
+    display:flex;    
+    position: relative;
+    flex-direction: row;
+    height: 100%;
+    width:50%; 
+    list-style: none;
+    background-image: url(../img/img3.jpg);
+    background-size: cover;
+  
+}
+
+.block3{
+    display: flex;
+    position: absolute;
+    left: 60%;
+    height:100%;
+    width: 40%;
+     /* border: 2px solid rgb(94, 156, 24);  */
+    list-style: none;
+    font-size: 0.7vh;
+    line-height: 2vh;
+    z-index: auto;
+    transform-origin: right top;
+    transform: rotate(5deg);
+}
+
+.text3 {    
+    display: flex;    
+    position: relative;
+    padding: 2% 0 0 1%;
+    height: 96%;
+    width:50%; 
+    background-color: white; 
+   /* border: 2px solid rgb(255, 102, 0);  */  
+   
+}
+
+.text3 h3{
+    display: block;
+    /* border: 1px solid red; */
+    width: 80%;
+    line-height: 1.2vh; /*Межстрочный интервал*/
+    position: relative;
+    text-align:left;
+    text-transform: uppercase;/*Заглавные буквы для текста*/
+    font-weight: bold;  
+    font-size: 1.0vh;
+}  
+
+.text3-text{
+    position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    line-height: 1.0vh;
+  
+}
+
+.picture3{
+    display:flex;    
+    position: relative; 
+    flex-direction: row;
+    height: 100%;
+    width:50%; 
+    list-style: none;
+    background-image: url(../img/img4.jpg);
+    background-size: cover;
+}
+
+.info{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction:column;
+    width: auto;
+    height: 10vh;
+    /* border: 2px solid red; */
+    line-height: 3vh;
+    margin-top: 2vh;
+    
+}
+
+.info_top, .info_bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* border: 1px solid saddlebrown; */
+    width: 100%;
+    height: 4vh;
+    list-style: none;
+    font-size: 2vh;
+    font-weight: bold;
+    color: rgb(141, 138, 138);
+   
+} 
+.info_top li, .info_bottom li{
+   margin-top: 2vh;
+   padding: 0 3vh;
+   
+}
+.info_top li:nth-child(2n), .info_bottom  li:nth-child(2n) {
+    border-right: 2px solid rgb(197, 194, 194);
+    border-left: 2px solid rgb(197, 194, 194);
+}
+
+.main-section{
+    display: block;
+    left: 5%;
+    position: relative;
+    height: 150vh;
+    width: 90%;
+    /* border: 2px solid rgb(69, 62, 172);  */
+
+}
+
+.logo2{
+    display: flex;
+    position: relative;
+    height: 30vh;
+    width: 100%;
+
+}
+
+.block4{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height:30vh;
+    width:60%;
+    /* border: 2px solid rgb(94, 156, 24);  */
+    list-style: none;
+    font-size: 0.7vh;
+    line-height: 2vh;
+    z-index: auto;  
+   
+}
+.picture4{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid red; */
+  
+    background-image: url(../img/img5.jpg);
+    background-size: cover;
+
+}
+.text4{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid red;
+    */
+}
+
+.text4-text{
+    list-style: none;
+    padding: 1vh 5vh 1vh 2vh;
+    background-color: rgb(236, 233, 233);
+
+}
+.text4-text li:first-child{
+   
+    font-size: 1.7vh;
+    font-weight: bold; 
+}
+
+.text4-text li:nth-child(2){
+    padding-top: 5%;
+    font-size: 0.9vh;
+    line-height: 150%;
+
+}
+.text4-text li:nth-child(2n+3){
+    padding-top: 5%;
+    font-size: 1vh;
+    font-weight: bold; 
+
+}
+.text4-text li:nth-child(2n+4){
+    padding-top: 5%;
+    font-size: 1vh;
+    font-weight: bold; 
+
+}
+
+.logo3{
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 30vh;
+
+}
+
+.block5{
+    
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height:30vh;
+    width:60%;
+    left: 35%;
+    top:-40%;
+    /* border: 2px solid rgb(94, 156, 24);  */
+    list-style: none;
+    font-size: 0.7vh;
+    line-height: 2vh;
+    z-index: auto;  
+   
+}
+.picture5{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    background-image: url(../img/img6.jpg);
+    background-size: cover;
+      /* border: 2px solid red; */
+
+}
+.text5{    
+    display: flex;
+    width: 50%;
+    height: 100%;  
+    /* overflow-y:hidden;Запрет выхода текста за границы блока */
+}
+
+.text5-text{
+    list-style: none;
+    padding: 1vh 5vh 1vh 2vh;
+    background-color: rgb(236, 233, 233);
+
+}
+
+.text5-text li{
+    margin-top: 5%;
+}
+
+.text5-text li:first-child{   
+    font-size: 1.7vh;
+    font-weight:bold; 
+ }
+
+.text5-text li:nth-child(2){
+    font-size: 1vh;
+    line-height: 150%;
+
+}
+
+.link li:first-child, .link li:last-child {
+    font-size: 1vh;
+    font-weight: bold; 
+    line-height: 150%;
+}
+
+.link{
+    display: flex;
+    list-style: none;
+    width: 100%;
+    height: 4vh;
+    margin-top: 10%;
+
+}
+
+.link li{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    width: 15vh;   
+}
+
+/*Ставим иконки перед текстом*/
+ .link li:before{
+  content: url(../img/ico2.png);
+   
+} 
+
+.logo4{ 
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    
+}
+
+.logo4-container{
+    display: block;
+    position: relative;
+    width: 60%;
+    height: 50vh;
+    margin-top: -12%;
+    background-color: rgb(230, 228, 228);
+    z-index: 0.9;  
+}
+
+.block6-top{
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+    height:50%;
+    width:100%;    
+    list-style: none;
+    font-size: 3vh;
+    font-weight: bold;
+    line-height: 4vh;
+    background-image: url(../img/img9.jpg);    
+    color: white;
+    justify-content: center;
+
+}
+
+.block6-top li{
+   padding-left: 5%;
+}
+
+.block6-bottom{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    font-size: 0.7vh;
+   
+}
+
+.block6-bottom ul{
+display: block;
+position: relative;
+list-style: none;
+width: 22%;
+padding: 2%;
+}
+
+.ico{   
+   text-align: center;
+   margin-top:3%;
+}
+
+.title1{
+    text-align: center;
+    margin:5% 0%;
+    font-size: 1vh;
+    font-weight: bold;
+
+}
+
+.logo5{ 
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30vh;    
+}
+
+.logo5-container{
+    display: block;
+    position: relative;
+    left: 40%;
+    width: 60%;
+    height: 40vh;
+    margin-top: 0%;
+    background-color: rgb(36, 36, 37);
+    /* border: 2px solid orangered; */
+    z-index: 0.91;
+}
+.main-list{
+    display: inline-block;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid snow; */
+    list-style: none;
+    color: rgb(131, 130, 129);
+
+}
+
+.title2{
+    font-size: 2.2vh;
+    font-weight: bold;
+    color: white;
+    margin: 5% 5% 2% 10%;
+}
+
+.anyText2{
+    font-size: 1.1vh;
+    margin: 0 5% 5% 10%;
+}
+
+.list-item1{
+    margin: 5% 5% 5% 10%;
+    font-size: 1.5vh;
+}
+
+
+.list-item1 span{
+    font-size: 1.2vh;
+    color: white;
+
+}
+
+.list-item1 p{
+   margin-left: 10%;
+   font-size: 1vh;
+}
+
+.picture6{
+    display: block;
+    position: absolute;
+    width: 40%;
+    height: 80%;
+    left:60%;
+    top:10%;
+    background-image: url(../img/img10.jpg);
+    background-size: cover; 
+}
+
+.logo6{ 
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    /* border: 2px solid yellow; */
+    
+}
+
+.logo6-container{
+    display:flex;
+    flex-direction: row;/*Направление положения элементов в блоке*/
+    justify-content: space-around;/*Выравнивание по горизонтальной оси с одинаковыми промежутками между элементами*/
+    flex-wrap: wrap;/*Перенос флекс-элементов на другую строку при заполнении*/
+    position: relative;
+    width: 60%;
+    height: 100%;
+    background-color: rgb(233, 233, 233);
+    color:rgb(82, 81, 81);
+    z-index: 0.93; 
+     /* border: 5px solid blue; */
+}
+
+.title3{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    width: 100%;
+    height: 20%;
+    font-weight: bold;
+    font-size: 2.2vh;
+    /* border: 2px solid black;  */  
+}
+
+.title3> li> span:before
+{
+    vertical-align:middle; /*Выравнивание иконок относительно текста*/
+    content: url(../img/ico11.png);
+}
+
+.title3> li> span::after{
+    vertical-align:middle; 
+    content: url(../img/ico11.png);
+}
+
+.list-item2{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    width: 30%;
+    height: 80%;   
+    /* border:2px solid red; */    
+}
+
+.ico,  .title4{
+   
+    font-size: 1.2vh;
+    text-align: center;
+    font-weight: bold;
+    /* border: 2px solid black; */
+}
+
+.anyText3{    
+    font-size: 1.2vh;
+    /* border: 2px solid black; */
+   
+}
+
+.list-item2 .ico img{
+    text-align: center;
+    height: 48px;
+    width: 48px;
+}
+
+.list-item3 li img{
+    width: 128px;
+    height: 128px;
+    text-align: center;
+}
+
+.list-item3{
+    display: flex;
+    width: 30%;
+    height: 80%;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+     /* border: 2px solid green; */
+}
+
+.list-item4{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    list-style: none;
+    width: 30%;
+    height: 80%;
+    /* border: 2px solid saddlebrown; */
+}
+

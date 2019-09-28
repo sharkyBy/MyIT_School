@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h2>Анкета посетителя</h2>
+    </header>
+    <main>
+        <form action="#">
+        <fieldset class="contactInfo">
+                <legend>Контактная информация</legend>
+            <div class="contact">
+
+                <!-- create property 'pattern' for element 'input' -->
+           
+            <label >Имя*<input type="text" class="firstName" placeholder="например:Иван" required autofocus pattern="[А-Яа-яЁё]{1,}"></label>
+            <label >Фамилия*<input type="text" placeholder="например:Смирнов" required pattern="^[А-Яа-яЁё\s]+$"></label>
+            <label >E-mail*<input type="email" required placeholder="например: login@gmail.com"></label>
+            <label >Дата посещения<input type="date"></label>
+        </div>
+        </fieldset>
+        <fieldset class="personalInfo">
+            <legend>Персональная информация</legend>
+            <div class="personal">
+            <label >Возраст<input type="number" min="1" max="100"></label>
+            <label for="">Любимая кухня<select name="eat" id="eat">
+                <option value="">Китайская</option>
+                <option value="">Французская</option>
+                <option value="" selected>Итальянская</option>
+                <option value="">Русская</option>
+                <option value="">Немецкая</option>
+                <option value="">Грузинская</option>
+            </select>
+        </label>
+       <label>Какие блюда Вы хотели бы увидеть в меню?
+           <textarea name="text" id="" cols="46" rows="5" placeholder="Пожелания..."></textarea>
+        </label> 
+    </div>
+        </fieldset>
+        <fieldset class="assessmentInfo">
+            
+            <legend>Оценка заведения</legend>
+            <div class="assessment">
+            <div class="radio1">
+                <span>  Почему Вы выбрали наше заведение?</span>
+                <label> <input type="radio"> &nbsp; Удобное месторасположение</label>
+                <label> <input type="radio"> &nbsp; Уидел рекламу</label>
+                <label> <input type="radio"> &nbsp; Посоветовали знакомые</label>
+                <label> <input type="radio"> &nbsp; Богатый выбор</label>
+                <label> <input type="radio"> &nbsp; Оптимальное соотношение цены и качества</label>
+            </div>
+            <div class="radio2">
+                <span>Вы будете рекомендовать наше заведение своим знакомым?</span>
+                <label> <input type="radio"> &nbsp; Да</label>
+                <label> <input type="radio"> &nbsp; Нет</label>
+            </div>
+        </div>
+        </fieldset>
+        <div class="form-footer">
+            <input type="reset">
+            <input type="submit">
+        </div>
+
+    </form>
+    </main>
+    
+</body>
+</html>

@@ -1,0 +1,719 @@
+/* @import url('https://fonts.googleapis.com/css?family=Roboto:400,700,900&display=swap&subset=cyrillic'); */
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Roboto', Arial, Helvetica, sans-serif; */
+    
+}
+body{
+    font-size: 10px;
+    color: black;
+    /* border: 5px solid brown; */
+    word-wrap: break-word;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;  
+    font-weight: 100;  
+    z-index: 0;
+}
+/*Top menu*/
+
+.top-nav-container  {
+    display: flex; 
+    justify-content: flex-end;
+    align-items: flex-end;
+    position: relative;
+    width:100%;
+    height: 90px;
+    font-size: 1.4em;
+    
+    /* border: 3px solid palevioletred; */
+}
+
+.top-nav-list{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+}
+
+.top-nav-list a{
+    text-decoration: none;
+    color: rgb(113, 113, 148); 
+}
+
+.list1{
+    display: flex;
+    justify-content: space-around;
+    width: 26%;
+    height: 70px; 
+    border-bottom: 1px solid rgb(230, 227, 227); 
+    /* border: 1px solid magenta; */
+   
+}
+
+.list2{
+    display: flex;
+    justify-content: flex-end;
+    width: 32%;
+    height: 70px;
+    border-bottom: 1px solid rgb(230, 227, 227);
+    /* border: 1px dashed magenta; */
+}
+
+
+/*Вкладка country*/
+.country{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    right: 20%;
+    width: 100px;
+    height: 70px;
+   
+    /* border: 1px dashed green;  */
+    
+}
+
+
+.country:hover .country-wrap{
+    display: flex;   
+} 
+
+.country.country:hover{
+    background: rgb(224, 224, 224);
+}
+
+
+.country-wrap{
+  display: none;
+    position: absolute;
+    top: 70px;
+    right:  0;
+    width: 630px;
+    height: 200px;   
+    /* border: 1px solid gray; */
+    
+   
+
+}
+.country-nav{
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index:1;
+    /* opacity: 0.5; */
+    background: rgb(224, 224, 224);
+}
+
+.country-nav-list{
+    display: flex;
+    list-style:none;      
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 20%;
+    background: rgb(224, 224, 224);
+    /* border: 1px solid gray;    */
+    z-index: 2; 
+  
+}
+
+.country-nav-list li{
+    width: 25%;
+    height: 100%;
+    /* border: 1px solid red; */
+}
+
+.country-nav-list li a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.country-nav-list li:first-child{
+    background: rgb(199, 197, 197);
+}
+
+ .europe, .asia, .america, .africa{
+   
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: 20%;
+   
+     
+}
+
+.europe{
+    display:flex;
+    z-index: 1;
+    /* opacity: 0.6; */
+    /* border: 1px solid yellow; */
+}
+
+
+
+.item {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5%;
+    list-style: none;
+    width: 20%;
+    height: 70%;
+    line-height: 1.6;
+    text-align: center; 
+    border-right: 1px solid rgb(199, 195, 195);
+    z-index: inherit;
+    /* border: 1px solid blue */
+    
+}
+
+.asia{
+   
+    display: none;
+    top: 20%;
+    z-index: 2;
+    /* opacity: 1; */
+    /* border: 1px solid green; */
+    
+}
+
+/* .country-nav-list li:nth-child(2):hover {
+    background: rgb(199, 197, 197); 
+       
+ } */
+
+ /* .country-nav-list li:nth-child(2):hover .europe, .america, .africa{
+   
+    display: none;
+} */
+ 
+ .america{
+    display:none;
+    z-index: 3;
+    /* opacity: 1; */
+    /* border: 1px solid rgb(128, 0, 64); */
+   
+    
+}
+
+/* .country-nav-list li:nth-child(3):hover{
+    background: rgb(199, 197, 197);
+
+} */
+
+/* .country-nav-list li:nth-child(3):hover .europe, .asia, .africa {
+    display: none;
+
+} */
+
+.africa{
+    display:none;
+    z-index: 4;
+    /* opacity: 1; */
+    /* border: 1px solid rgb(68, 128, 0); */
+   
+    
+}
+
+/* .country-nav-list li:last-child:hover {
+    
+     background: rgb(199, 197, 197);
+
+} */
+
+/* .country-nav-list li:nth-child(3):hover .europe, .asia, .america {
+    display: none;
+
+} */
+
+
+
+.search {
+    position: relative;
+    top: 8px;
+    width: 16%;
+    height: 80%;
+    /* border: 1px solid black;  */
+    
+}
+
+.search a{
+    display: block;
+    widows: 100%;
+    height: 100%;
+}
+
+.search img{
+    position: relative;
+    top: 6px;
+    left: 8px;
+    width: 40px;
+    height: 40px;   
+    filter: opacity(20%); /*Прозрачность изображения (не было под рукой иконки серого цвета*/
+   
+}
+
+/*Color for link*/
+
+.top-nav-list  a:hover{
+    color: rgb(158, 158, 197); 
+}
+
+.country a:hover{
+    color: rgb(113, 113, 148); 
+}
+
+/*Стрелка для ссылки "country"*/
+
+.arrow{
+    
+    display:inline-block;
+    position: absolute;
+    vertical-align: middle;
+    top: 34px;
+    left: 80px;
+    width: 0;
+    height: 0;
+    border: 5px  solid transparent;
+	border-top: 5px solid rgb(113, 113, 148); 
+}
+
+/* Bottom menu*/
+
+.main-nav-container{
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 70px;
+    /* border: 2px solid blue; */
+}
+
+.name-company{   
+    width: 30%;
+    height: 100%;
+    /* border: 4px solid sandybrown; */
+   
+}
+
+.name-company > a{
+    display: flex;
+    flex-flow: row wrap;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: black;
+}
+
+.name-company > a > h1{
+    align-self: center;
+    width:60%;
+    height: auto;
+    margin: 0;
+    padding-top: 4px;
+    font-size: 3.8em;
+    line-height: 0.7;
+    /* border: 3px solid rgb(128, 0, 96); */
+}
+
+.name-company > a > h1 > span{
+    font-size: 0.9em;
+    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(172, 173, 173);
+    padding-left: 74px;
+}
+
+.name-company > a > h3{
+     width: 40%;
+    height: 100%;
+    font-size: 1.6em;
+    letter-spacing: 0.8px;
+    color: rgb(194, 196, 197);
+    padding-top: 12px;
+    /* border: 3px solid rgb(0, 183, 255); */
+}
+
+.main-nav-list{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content:space-evenly;
+    flex-flow:row wrap;
+    list-style: none;
+    
+    /* border: 1px solid rgb(30, 31, 29); */
+    
+}
+
+.main-nav-list > li{           
+    width: auto;
+    height: 100%;
+    font-size: 1.5em;
+    font-weight: bold;
+    
+    /* border: 1px dashed rgb(255, 0, 0); */
+
+}
+
+.main-nav-list > li>a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 24px 20px;
+    text-decoration: none ;
+    
+    color: black;
+    /* border: 1px dashed rgb(13, 128, 42); */
+        
+}
+
+.main-nav-list > li > a:hover {
+    background-color: rgba(103,121,154, 0.85);
+    color: white;
+    transition: 0.2s all;
+}
+
+.about-us{
+    position: relative;
+}
+
+/*вложение (подменю) для вкладки "о нас" и "Карьера"*/
+
+.aboutUs-wrap, .careers-wrap{
+    display: none;
+    justify-content: flex-start;
+    position: absolute;
+    left: 0;   
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    padding: 0;
+    border-top: 8px solid rgba(103,121,154, 0.85);
+    border-bottom: 1px solid rgba(103,121,154, 0.85);
+    background: white;
+    /* top:-9999em; */ /*Вариант убрать всплывающий блок с экрана и вернуть в исходное
+    положение при наведении на ссылку меню (top:0)*/  
+   
+}
+
+.aboutUs-text-link-wrap, .careers-text-link-wrap{
+    width: 34%;
+    height: 90%;
+    background: rgba(103,121,154, 0.85);
+    /* border: 2px solid palevioletred; */
+}
+
+.aboutUs-text-link-wrap h1, .careers-text-link-wrap h1{
+    width: 100%;
+    height: auto;
+    font-size: 2.7em; 
+    font-family: 'Roboto';
+    font-weight: 100;
+    padding: 36px 30px;
+    letter-spacing: -0.6px;
+    color: white;
+    /* border: 3px solid black; */
+}
+
+.aboutUs-link{   
+    margin: 34px 0 0 36px;
+    width: 60%;
+    height:44px;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+   
+}
+
+
+.careers-link{
+    margin: 34px 0 0 36px;
+    width: 60%;
+    height:60px;
+    color: white;
+    border: 1px solid white;
+    text-align: center;
+}
+
+.aboutUs-link>a, .careers-link>a{
+    text-decoration: none;
+    padding-top: 12px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 100;
+}
+/*Анимация при наведении на ссылку*/
+
+/* .aboutUs-text-link a:hover{
+
+} */
+
+
+/*Подменю вкладки "О нас" и "Карьера"*/
+
+.aboutUs-submenu, .careers-submenu{
+width: 16%;
+height: 100%;
+background: rgb(224, 224, 224);
+/* border: 2px solid blue; */
+}
+
+.aboutUs-submenu-list, .careers-submenu-list{
+    list-style: none;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    /* border: 1px dashed yellow; */
+}
+
+.aboutUs-submenu-list li, .careers-submenu-list li{
+    padding: 10px  20px 0 20px;
+    width: auto;
+    height: auto;
+      
+}
+
+.aboutUs-submenu-list li>a, .careers-submenu-list li>a{
+    margin: 0;
+    padding: 0;
+    font-size: 1em;
+    color: rgb(104, 101, 101);
+    font-weight: 100;
+    text-decoration: none;
+}
+
+.aboutUs-submenu-list a:hover, .careers-submenu-list a:hover{
+    color: rgb(165, 165, 216);
+}
+
+.aboutUs-picture-link-wrap, .careers-picture-link-wrap{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    /* border: 2px solid green; */
+
+}
+
+
+.aboutUs-picture-link, .careers1-picture-link, .careers2-picture-link{
+    display: flex;
+     width: 46%;
+    height: 60%;
+    margin: 0;
+    padding: 20px 0 0 30px;
+    /* border: 1px solid black;   */
+   
+}
+
+.aboutUs-picture-link>a>img, .careers1-picture-link>a>img, .careers2-picture-link>a>img{
+    width: 260px;
+    height: 180px;
+  }
+
+
+.aboutUs-picture-link > a,  .careers1-picture-link>a, .careers2-picture-link>a{
+    width: 100%;
+    height: 100%;    
+    text-decoration: none;
+    font-weight: 100;
+    color: black;
+    
+    /* border: 2px solid red; */
+}
+
+.title-link{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 20px;
+    margin: 15px 0;
+}
+
+.aboutUs-picture-link h4, .careers1-picture-link h4, .careers2-picture-link h4{
+  
+  
+    width: 40%;
+    height: 20px;
+   
+    /* border: 1px solid red; */
+    font-weight: 600;
+}
+
+.aboutUs-picture-link h5, .careers1-picture-link h5, .careers2-picture-link h5{
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    height: 20px;
+    font-size: 0.9em;
+    font-weight: 100;
+   
+   
+    /* border: 1px solid red; */
+   
+}
+
+.aboutUs-picture-link > a > span, .careers1-picture-link>a>span, .careers2-picture-link>a>span{
+    font-size: 1.2em;
+    
+    
+}
+
+.aboutUs-picture-link > a > span:hover, .careers1-picture-link>a>span:hover, .careers2-picture-link>a>span:hover{
+    text-decoration: underline;
+}
+
+#about-us:hover .aboutUs-wrap{
+     display: flex;    
+}   
+#careers:hover .careers-wrap{
+    display: flex;
+}
+
+
+.slider{
+    width: 100%;
+    height: 400px;
+    background: url(../img/slide1.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/*Подменю вкладки  "Продуты"*/
+.product-wrap{
+    display:none;    
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 620px;   
+    background: rgb(238, 238, 238);
+    border-bottom: 1px solid rgba(103,121,154, 0.85);
+}
+   
+
+#product:hover .product-wrap{
+    display: block;
+   
+}
+
+.product-top-row{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    background:rgba(103,121,154, 0.85);
+    color: white;
+    /* border: 1px solid green; */
+
+}
+
+.product-top-row > li:first-child{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 80%;
+    font-size: 1.4em;
+    font-weight: 100;
+    font-family: 'Roboto';
+    /* border: 3px solid rgb(124, 0, 128); */
+}
+
+.product-top-row > li:nth-child(2){
+   
+    width: 25%;
+    height: 70%;
+    border:1px solid white;
+}
+
+.product-top-row>li:last-child{
+    width: 20%;
+    height: 70%;
+    border: 1px solid white;
+}
+
+.product-top-row>li>a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-size: 1.1em;
+    color: white;
+    font-weight: 100;
+    /* border: 1px solid red; */
+}
+
+.product-top-row>li>a>img{
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    filter: invert(100%); /*'filter' - графические эффекты. Значение 'invert' преобразовало черный цвет в белый*/
+}
+
+.product-submenu{
+    display: flex;
+    position: relative;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+    width: 70%;
+    height:540px;
+    background-color: rgb(224, 224, 224);
+    color: rgb(104, 101, 101);
+    border-bottom: 1px solid rgb(165, 164, 164);
+}
+
+.item-product{
+    width: 28%;
+    height: auto;
+    margin-top: 30px;
+    /* border: 1px solid red; */
+
+}
+
+.item-product> ul{
+    list-style: none;
+    margin-top: 10px;
+         
+}
+
+.item-product>ul>li{
+    padding-top: 7px;
+}
+
+.item-product a{
+    text-decoration: none;    
+    color: rgb(104, 101, 101);
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 200;
+}
+
+.item-product>h4>a{
+    font-size: 0.9em;
+    font-weight:bold;
+}
+
+.product-submenu  ul li a:hover{
+    color:rgb(165, 165, 216);
+}
+
+.services{
+    position: absolute;
+    top:80px;
+    right: 0;
+}
+

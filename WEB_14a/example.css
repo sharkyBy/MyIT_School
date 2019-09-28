@@ -1,0 +1,130 @@
+*{
+    box-sizing: border-box;
+    color: blueviolet;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
+
+
+}
+
+.flex-container{
+    display: flex;
+    flex-flow: column nowrap;
+    overflow-y: scroll;
+    width: 30%;
+    height: 20vh;
+    border: 1px solid red;
+    box-sizing: border-box;
+   
+}
+div, li{
+   
+    margin-top: 1vh;
+    display: flex;
+    border: 1px dashed black;
+    width: 60%;
+    /* min-height: 5vh; */
+    height: auto;
+    list-style: none;
+    word-break: break-all;
+    overflow-wrap: break-word;
+   overflow:wrap;
+}
+
+div:nth-of-type(2n), li:nth-of-type(2n){
+    align-self: flex-end;
+}
+
+
+.arrow{
+    display: flex;
+    width: 30vh;
+    height: 5vh;
+    margin: 0;
+    padding: 0;
+    border:rgb(153, 149, 149);
+}
+
+.black{
+    display:block;
+    width: 70%;
+    height: 100%;
+    background-color: rgb(153, 149, 149);
+    margin: 0;
+  padding: 0;
+  border:rgb(153, 149, 149);
+}
+
+.white{
+    display: block;
+    position: relative;
+    width: 3.53vh;
+    height: 3.53vh;
+    background-color: rgb(153, 149, 149);
+    /* border-top:5px solid rgb(185, 22, 22);
+    border-right: 5px solid rgb(185, 22, 22); */
+    transform-origin:initial;
+    transform: rotate(45deg);
+    left: -16px;
+    top: -6px;
+    border:rgb(153, 149, 149);
+  
+}
+
+
+/*выпадающее окно*/
+.wrap-container{
+    display: flex;
+    flex-flow: row nowrap;
+    width: 100%;
+
+}
+
+.wrap-container ul > {
+    width: 100%;
+}
+
+.container{
+   position: relative;
+    width: 100vh;
+    height: 50vh;
+}
+.link{
+    display: inline-block;
+    position: relative;
+    left: 20%;
+    width: 40%;
+    height: 10%;
+    background-color: rgb(146, 146, 122);
+}
+
+.link a{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* .link a:hover{
+    background-color:white;
+    transform: rotate3d(0,0,1,-45deg) translate3d(0,-3em,0);
+    transition: transform .3s,opacity .3s,background-color .3s;
+} */
+
+.overlay {
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+  }
+
+.container a:hover .overlay{
+    bottom: 0;
+    height: 100%;
+}

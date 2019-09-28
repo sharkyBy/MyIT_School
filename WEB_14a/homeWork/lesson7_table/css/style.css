@@ -1,0 +1,144 @@
+
+table{
+    width: 100%;
+    height: auto;
+    text-align: center;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: rgb(103, 150, 144);
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+tr, th, td{
+    border: 1px solid black;   
+}
+
+caption{
+    font-size: 1.5em;
+    
+   
+}
+
+tfoot td:first-child{
+    text-align: end;
+}
+thead  tr{
+    background-color: rgb(132, 196, 180);
+    height: 3em;
+    
+}
+
+table thead tr:last-child th{
+  
+    transform: rotate(-90deg); /*Повернули текст*/
+    height: 5em;
+    /* writing-mode: vertical-lr;   Не работает!!!????? */
+
+    
+}
+
+/*Меняем цвет шрифта для выбранных ячеек*/
+/*Таблица _ шапка таблицы _ строка:последняя строка _ ячейка:первые три*/
+table thead tr:last-child th:nth-child(-n+3){
+    color: rgb(207, 30, 17);
+    
+    
+    
+}
+
+/*Таблица _ шапка таблицы _ строка:последняя строка _ ячейка:начиная с 4й:заканчивая 6й*/
+table thead tr:last-child th:nth-child(n+4):nth-child(-n+6){
+    color: rgb(5, 139, 27);
+}
+/*Таблица _ шапка таблицы _ строка:последняя строка _ ячейка:начиная с 7й:заканчивая 9й*/
+table thead tr:last-child th:nth-child(n+7):nth-child(-n+9){
+    color: rgb(151, 138, 19);
+}
+/*Таблица _ шапка таблицы _ строка:последняя строка _ ячейка:начиная с 10й*/
+table thead tr:last-child th:nth-child(n+10){
+    color: rgb(19, 21, 151);
+}
+
+tbody tr:nth-child(2n+1){
+    background-color: rgb(130, 170, 145);
+}
+
+/*Таблица _ тело таблицы _ строка:все нечетные _ ячейка:последняя*/
+table tbody tr:nth-child(2n+1) td:last-child{
+    color: rgb(179, 67, 3);
+    background: rgb(107, 184, 120);
+}
+
+/*Таблица _ тело таблицы _ строка:последняя _ ячейка:последняя*/
+table tbody tr:last-child td:last-child{
+    color: black;
+    background-color: rgb(130, 170, 145);
+}
+/*Таблица _ тело таблицы _ строка:первая _ ячейка:первая*/
+table tbody tr:first-child td:first-child{
+    background-color: rgb(80, 156, 131)
+}
+
+/*Таблица _ тело таблицы _ строка:пятая _ ячейка:первая*/
+table tbody tr:nth-child(5) td:first-child{
+    background-color: rgb(80, 156, 131)
+}
+
+/*Таблица _ тело таблицы _ строка:первая _ ячейка:вторая*/
+table tbody tr:first-child td:nth-child(2){
+    background-color: rgb(68, 110, 94);
+    color: rgb(165, 212, 35);
+}
+/*Таблица _ тело таблицы _ строка:третяя _ ячейка:первая*/
+table tbody tr:nth-child(3) td:nth-child(1){
+    background-color: rgb(68, 110, 94);
+    color: rgb(165, 212, 35);
+}
+
+/*Таблица _ тело таблицы _ строка:пятая _ ячейка:вторая*/
+table tbody tr:nth-child(5) td:nth-child(2){
+    background-color: rgb(68, 110, 94);
+    color: rgb(165, 212, 35);
+}
+
+table tfoot tr{
+    height: 2em;
+    color: blue;
+}
+
+
+
+.btn{
+    position: relative;
+    top: 10vmin;
+    width: 10vmin;
+    height: 5vmin;
+    border: 1px solid black;
+}
+
+.fon{
+    position: relative;
+    top: 0;
+    width: 11.1vmin;
+    height: 5vmin;
+    transform-origin: bottom left;
+    transform: rotate(-26.8deg);
+    
+    border-bottom: 1px solid black;
+}
+
+
+
+@media all and (max-width:460px){
+    table{
+        max-width: 100%;
+        font-size: 1.5em;
+    }
+    
+    tr{
+        font-size: 1.4em;
+       
+    }
+}

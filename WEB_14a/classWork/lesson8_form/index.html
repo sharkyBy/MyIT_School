@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="text">
+            <h2>Регистрация</h2>
+        </div>
+        <div class="close"><span> </span>  <span> </span></div>
+    </header>
+    <div class="container">
+        <form action="">
+            <div class="head-wrap">
+            <div class="img-wrap">
+                <div class="img"></div>
+                <label><input type="list"></label>
+            </div>
+            <div class="name">
+                <label>Имя<input type="text"></label> 
+                <label >Фамилия <input type="text"></label> 
+                <label>Мужской <input type="checkbox" name="М" id="man"></label>
+                <label>Женский<input type="checkbox" name="Ж" id="woman"></label>
+            </div>
+        </div>
+        <div class="footer-wrap">
+           <div class="addres">
+            <label >Город 
+                <select name="town" id="town">
+                    <option value="Brest">Брест</option>
+                    <option value="Vitebsk">Витебск</option>
+                    <option value="Gomel">Гомель</option>
+                    <option value="Grodno">Гродно</option>
+                    <option value="Mogilev">Могилев</option>
+                    <option value="Minsk">Минск</option>
+                </select>
+        </label>
+
+        <label >Улица
+            <select name="street" id="street">
+                <option value="">Московская</option>
+                <option value="">Пионерская</option>
+                <option value="">Ленинградская</option>
+                <option value="">Янки купалы</option>
+                <option value="">Пушкинская</option>
+                <option value="">Ленина</option>
+            </select>
+
+        </label>
+
+        <label>Дом
+            <select name="house" id="house">
+                <option value="">1</option>
+                <option value="">2</option>
+                <option value="">3</option>
+                <option value="">4</option>
+                <option value="">5</option>
+                <option value="">6</option>
+            </select>
+        </label>
+         </div>
+         <div class="text-area">
+             <textarea name="information" id="information" cols="50" rows="15">Дополнительная информация</textarea>
+         </div>
+     </div>
+            <div class="form-footer">
+                <input type="reset">
+                <input type="submit">
+            </div>
+        </form>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+/*0.0.1.1*/
+
+.list1 li {
+    font-size: 16px;
+}
+
+/*0.0.1.2*/
+
+.list1>li li {
+    font-size: 22px;
+}
+
+/*0.0.1.4*/
+
+.list1>li>ul>li a {
+    color: red;
+    font-size: 35px;
+}
+
+/*0.0.2.1*/
+
+.list1>.list3 a {
+    font-size: 20px;
+    color: blueviolet;
+}
+
+div[name="logo"] {
+    color: red;
+    font-size: 20px;
+}
+
+div[name] {
+    color: green;
+    font-size: 20px;
+}
+
+/*0.1.0.0*/
+
+#example {
+    color: blue;
+    font-size: 25px;
+}
+/*0.1.1.0*/
+.logo2 #example{
+    color: green;
+}
+
+.logo5{
+    font-size: 30px!important;
+}
+/* 
+.init li{
+    color: red;
+    font-size: 16px;
+}
+
+.init li~li{
+    font-size: 26px;
+    color: blue;
+} */
+
+.init li:nth-child(2n+1):first-child{
+    color: green;
+    font-size: 22px;
+}
+
+/* .init li:last-child{
+    color: blue;
+    font-size: 16px;
+} */
+
+/* .init li:first-child{
+    color: purple;
+    font-style: italic;
+    font-size: 22px;
+
+} */
+
+ .grow li+li+li+li+li{
+    font-size: 16px;
+    color: brown
+}
+

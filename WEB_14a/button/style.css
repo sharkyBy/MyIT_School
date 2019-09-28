@@ -1,0 +1,72 @@
+/*1 способ устройства чекбокса*/
+/* .wrapper{
+    width: 60px;
+    height: 60px;
+    background: paleturquoise;
+    display: flex;
+    
+}
+
+.btnCheck{
+    display: none;
+    
+}
+
+.example{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 400px;
+    height: 250px;
+    background: lightgrey;
+}
+
+.btnCheck:checked ~ .example > .white-blue >.white {
+    display: flex;
+    background: lightcoral;
+    color: white;
+}
+
+.btnCheck:checked ~ .example > .white-blue >.blue {
+    display: flex;
+    background: lightcoral;
+    color: blue;
+} */
+
+/*Такой способ изменить объект не сработает.
+Причина - псевдокласс чеккед применим только к сестринским элементам*/
+ .wrapper{
+    width: 60px;
+    height: 60px;
+    background: paleturquoise;
+    display: flex;
+    
+}
+
+.btnCheck{
+    display: none;
+    
+}
+
+.example{
+    position: absolute;
+    left: 0;
+    top: 100px;
+    width: 400px;
+    height: 250px;
+    background: lightgrey;
+}
+
+.wrapper .btnCheck:checked   .white-blue  .white {
+    display: flex;
+    background: lightcoral;
+    color: white;
+}
+
+.btnCheck:checked ~ .example > .white-blue >.blue {
+    display: flex;
+    background: lightcoral;
+    color: blue;
+} 
+
+
