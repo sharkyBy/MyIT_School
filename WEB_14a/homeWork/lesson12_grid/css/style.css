@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+   
+}
+
+.grid{
+    display: grid;
+    background: white;
+    
+   /* grid-template-columns: repeat(3,1fr);/*ширина и кол-во столюцов*/
+   /* grid-template-rows: repeat(5,1fr);/*высота строк*/
+   /* grid-template: repeat(5,1fr)/repeat(3,1fr); /*сокращенное свойство: строка()/столбец()*/
+   /* grid-template-columns: repeat(2, 1fr 2fr 3fr); /*чередование ячеек разных размеров (2 чередования, размер 1 2 3)*/
+   /* grid-template-columns: minmax(150px,250px) 1fr 2fr;/*установка мин/макса для первого столбца*/
+    grid-gap: 5px;/*промежутки между ячейками*/
+    grid-template-rows: repeat(10,1fr);/*установка значений высоты строки*/
+   /* grid-auto-rows: minmax(50px,auto);/*высота строки мин/макс(50, авто)-по содержимому*/
+   /* grid-auto-flow: column;/*Размещение элементов сетки в порядке: строка, столбец, свободное пространство*/
+    /*grid-template-columns: repeat(auto-fill, 50px);/*заполнение строки возможным кол-вом ячеек размером 50рх -остальное свободно если нечем  заполнять*/
+   /* grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));/*заполнение строки возможным кол-вом ячеек размером 200рх/1fr--остальное свободно если нечем  заполнять*/
+   /* grid-template-columns: repeat(auto-fit,50px);/*Действует подобно авто-фил*/
+   grid-template-columns: repeat(auto-fil,minmax(320px,1fr));/*Действует подобно авто-фил, но при наличии свободного пространства растягивает элементы, заполняя свободное место*/
+
+/*Выравнивание элементов сетки: justify-items:(stretch, start, end, center); align-items(stretch, start, end, center)*/
+/*Для элементов сетки: align-self(stretch, start, end, center); justify-self(stretch, start, end, center)*/
+
+grid-template-areas: 
+        "item1 item1"
+        "item2 item3"
+        "item4 item5"
+        "item6 item7"
+        "item8 item9"
+        "item10 item11"
+        "item12 item12";
+}
+
+.grid div:nth-child(2n){
+    background: rgb(166, 166, 255);
+    border:1px solid blue;
+}
+
+.grid div:nth-child(2n+1){
+    background: rgb(131, 131, 192);
+    border:1px solid blue;
+}
+
+.item1{
+    grid-area: item1;
+}
+
+.item2{
+    grid-area: item2;
+}
+
+.item3{
+    grid-area: item3;
+}
+
+.item4{
+    grid-area: item4;
+}
+
+.item5{
+    grid-area: item5;
+}
+
+.item6{
+    grid-area: item6;
+}
+
+.item7{
+    grid-area: item7;
+}
+
+.item8{
+    grid-area: item8;
+}
+
+.item9{
+    grid-area: item9;
+}
+
+.item10{
+    grid-area: item10;
+}
+
+.item11{
+    grid-area: item11;
+}
+
+.item12{
+    grid-area: item12;
+}
+
+@media(max-width:320px){
+    .grid{
+        grid-template-columns:  1fr;
+        grid-template-areas: 
+        "item1"
+        "item2"
+        "item3"
+        "item4"
+        "item5"
+        "item6"
+        "item7"
+        "item8"
+        "item9"
+        "item10"
+        "item11"
+        "item12"
+        
+    }
+
+}
