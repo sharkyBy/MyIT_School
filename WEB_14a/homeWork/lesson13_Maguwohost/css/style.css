@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+   
 }
 
 /*Header*/
@@ -77,7 +78,7 @@ a{
     text-decoration: none;
     height: 100%;
     width: 100%;    
-   color: black;
+   color: rgb(32,34,66);
 
 }
 
@@ -97,7 +98,7 @@ a{
 
 .btn>li:first-child a{
     font-size: 16px;
-    color: black;
+    color: rgb(32,34,66);
     background:rgb(255,225,62);
     border: 1px solid white;
 }
@@ -105,6 +106,7 @@ a{
 .btn>li:last-child a{
     font-size: 24px;
     width: 100%;
+    color: rgb(32,34,66);
 }
 
 /* end header */
@@ -115,62 +117,62 @@ a{
     justify-content: center;
     position: relative;
     width: 100%;
-    height: 40em;
-    
-    border: 1px solid green;
+    height:740px;   
+    /* border: 1px solid green; */
 }
 
 .img-container >img{
     width: 100%;
-    height: 100%;
+    height: 100%;    
     filter: brightness(0.8);
 }
 
 .img-container>h1 {
     position: absolute;
-    top: 5em;
+    top: 26%;
     color: white;
+    font-size: 2.6em;
     font-family: 'Noto Serif', serif;
+    /* border: 1px solid red; */
   
 }
 
 .img-container>h3{
     position: absolute;
-    top: 10em;
+    top: 36%;
     color: white;
     font-family: 'Work Sans', sans-serif;
     font-weight: 300;
-    font-size: 22px;
+    font-size: 1.8em;
+    /* border: 1px solid red; */
 }
 .logo-img{
     position: absolute;
-    top:18em;
-    width: 7em;
-    height: 7em;
+    top:46%;
+    width: 7%;
+    height: 7%;
+    /* border: 1px solid red; */
     
 }
 .input{
     display: flex;
     position: absolute;
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
-    width: 28em;
-    height: 4em;
-    top: 30em;
-    border: 10px solid rgb(221,221,221);
+    width: 40%;
+    height: 10%;
+    bottom: 12%;
+    border: 16px solid rgb(221,221,221);
+    /* border: 1px solid red; */
 }
+
 .input [type="email"]{
     height: 100%;
     width: 60%;
-    padding: 10px;
+    padding: 2%;
     outline-style: none;
     border: none;
-    
-    
-
-
 }
+
 #mail{
     height: 100%;
     width: 12%;
@@ -179,8 +181,8 @@ a{
     background-color: rgb(255,225,62);
    
 }
-.input [type="submit"]{
-    
+
+.input [type="submit"]{    
     height: 100%;
     width: 28%;
     border:none;
@@ -191,6 +193,214 @@ a{
     
 }
 
+/* Service content */
+
+.service-container{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 40em;
+    
+}
+
+.webhost, .domain{
+    padding: 30px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-evenly;
+    align-content: space-around;
+    width: 50%;
+    height: 100%;
+    /* border: 1px solid green; */
+    
+}
+
+.webhost{
+    background-color: rgb(32,34,66);
+    color: white;
+}
+
+.domain{
+    background-color: rgb(255,225,62);
+    color: rgb(32,34,66);
+}
+
+.webhost>img{
+    
+    width: 160px;
+    height: 160px;
+    align-self: center;
+    /* border: 1px solid white; */
+
+}
+
+.webhost>section>h2, .domain>section>h2{
+    text-align: center;
+    width: auto;
+    height: auto;
+    font-size: 2.1em;
+    margin-bottom: 0.5em;
+   
+}
+
+.webhost>section>p, .domain>section>p{
+    width: 25em;
+    height: auto;
+    font-size: 1.2em;
+    text-align: center;
+    color: inherit;
+}
+
+.webhost>button, .domain>button{
+    width: 8em;
+    height: 2em;
+    color: inherit;
+    background: inherit;
+    align-self: center;
+    cursor: pointer;
+    outline-style: none;
+    font-size: 1.2em;
+    border: 1px solid white;
+}
+
+.domain>span{
+    display: inline-flex;
+    width: auto;
+    height: 160px;
+    font-size: 6em;
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 700;
+    color:  rgb(32,34,66);
+    align-items: center;
+    justify-content: center
+    
+}
+
+.webhost>button:hover {
+    background-color: rgb(255,225,62);
+    color:  rgb(32,34,66);
+    transition: 0.3s all ease-in-out;
+}
+
+.domain>button:hover{
+    background-color: rgb(32,34,66);
+    color: rgb(255,225,62);
+    transition: 0.3s all ease-in-out;
+}
+
+/* feature section */
+
+.feature-container{
+    display: flex;
+    flex-flow: column wrap;
+   margin: 0 5%;
+    width: 90%;
+    height:600px;
+    
+}
+
+.feature-header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 150px;
+    justify-content: flex-end;
+    align-items:center;
+    line-height: 1.5;
+    
+   
+} 
+
+.feature-header>h1 {
+    font-size: 3em;
+}
+
+.feature-header>h3{
+    font-size: 1.8em;
+}
+
+.feature-section{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    width: 100%;
+    height:450px;
+    /* border: 1px solid red; */
+
+}
+
+.section{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-evenly;
+    align-items: center; 
+    width: 25%;
+    height: 80%;
+    text-align: center;
+    /* border:1px solid green; */
+  
+    
+}
+
+.section>span{
+    width: 80px;
+    border: 1.5px solid rgb(141,141,153);
+}
+
+.section>h2{
+    color: rgb(244,214,57);
+    font-size: 2em;
+}
+
+.section>p{
+    width: 75%;
+    color: rgb(146,145,151);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+    line-height: 1.6;
+}
+
+/*  Our clients*/
+
+.clients-container{
+    width: 90%;
+    height: 580px;
+    margin: 0 5%;
+    display: flex;
+    flex-flow: row wrap;
+    border: 1px solid salmon;
+}
+.clients-company{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    height: 50%;
+    border: 1px solid black;
+
+}
+
+.clients-company>section{
+    width: 30%;
+    height: 60%;
+    align-self: center;
+    border: 1px solid rebeccapurple;
+}
+
+.clients-company>section>h1{
+   
+}
 
 
+.figure-wrapper>figure{
+    width: auto;
+    height: auto;
+    border: 1px solid saddlebrown;
+}
+.figure-wrapper{
+    width: 70%;
 
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
