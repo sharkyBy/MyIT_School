@@ -1,9 +1,10 @@
 *{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; 
    
 }
+
 
 /*Header*/
 
@@ -11,25 +12,33 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
+    width: auto;
     height: 150px;
     font-family: Raleway;
+    /* border: 1px solid salmon; */
 }
 
 .nav{
+    font-size: 16px;
     width:40%;
-    height: 40px;
+    height:auto;
     align-self: center;
+    /* border: 1px solid red; */
     
 }
 
 .logo-header{
-    
+    width: 24%;
+    height: auto;
     align-self: center;
+    
 }
 
 .help{
+    width: 27%;
+    height: auto;
     align-self: center;
-    /* border: 1px solid black; */
+    
 }
 
 
@@ -38,8 +47,11 @@
     display: flex;
     justify-content: space-around;
     list-style: none;
+    width: 100%;
     height: 100%;
-    font-size: 16px
+    
+    
+   
     
 }
 
@@ -52,7 +64,7 @@
     display: flex;  
     justify-content: center;
     height: 100%;
-    width: 6em;
+    width: 19%;
     
 }
 
@@ -74,6 +86,7 @@
     justify-content: space-between;    
     list-style: none;
     line-height: 3;
+    font-size: 16px;
 
 }
 
@@ -89,7 +102,7 @@
 }
 
 .btn li{
-    width: 8em;
+    width: 36%;
     height: 2.5em;
     /* border: 1px solid red; */
 }
@@ -114,7 +127,7 @@
 
 
 .btn>li:first-child a{
-    font-size: 16px;
+    
     color: rgb(32,34,66);
     background:rgb(255,225,62);
     border: 1px solid white;
@@ -225,7 +238,7 @@ main{
     display: flex;
     flex-flow: row wrap;
     width: 100%;
-    height: 40em;
+    height: 640px;
     font-family: Raleway;
     
 }
@@ -233,10 +246,10 @@ main{
 .webhost, .domain{
     padding: 30px;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     justify-content: space-evenly;
     align-content: space-around;
-    width: 50%;
+    width: 50.0%;
     height: 100%;
     /* border: 1px solid green; */
     
@@ -265,28 +278,32 @@ main{
     text-align: center;
     width: auto;
     height: auto;
-    font-size:2.1em;
+    font-size:36px;
     margin-bottom: 0.5em;
    
 }
 
 .webhost>section>p, .domain>section>p{
-    width: 25em;
+    position: relative;
+    left:40px ;
+    width: 80%;
     height: auto;
-    font-size: 1.2em;
+    font-size: 14px;
+    font-family: Raleway;
+    line-height: 2;
     text-align: center;
     color: inherit;
 }
 
 .webhost>button, .domain>button{
-    width: 8em;
-    height: 2em;
+    width:24%;
+    height: 8%;
     color: inherit;
     background: inherit;
     align-self: center;
     cursor: pointer;
     outline-style: none;
-    font-size: 1.2em;
+    font-size: 20px;
     border: 1px solid white;
 }
 
@@ -294,7 +311,7 @@ main{
     display: inline-flex;
     width: auto;
     height: 160px;
-    font-size: 6em;
+    font-size: 7em;
     font-weight: 700;
     color:  rgb(32,34,66);
     align-items: center;
@@ -510,13 +527,52 @@ main{
 
 .grid-container{
     width: 90%; 
-    height: 500px;
+    height:500px;
     display: grid;
-    grid-template-columns: 2fr repeat(4,1fr);
-    grid-template-rows: 1fr 1.8fr;
-    grid-gap: 20px 20px;
-    /* border: 1px solid red; */
+    grid-template: 1fr 1.2fr /repeat(auto-fit,minmax(100px,1fr));
+    grid-gap: 40px 20px;
+    border: 1px solid red;
+}
+
+
+
+.grid-section{
+    
+    grid-column: 1/3;   
+}
+
+.img1{
    
+    grid-column: 3/4;    
+    background: url(../img/c1.jpg) center center no-repeat no-repeat;
+    background-size: contain;
+  
+}
+
+.img2{
+   
+    grid-column:4/5;    
+    background: url(../img/c2.jpg) center center no-repeat no-repeat;
+    background-size: contain;
+         
+}
+
+.img3{
+  
+    grid-column: 5/6;   
+    background: url(../img/c3.jpg) center center no-repeat no-repeat;
+    background-size: contain;
+
+         
+}
+
+.img4{
+  
+    grid-column: 6/7;   
+    background: url(../img/c4.jpg) center center no-repeat no-repeat;
+    background-size: contain;
+    
+         
 }
 
 .grid-section p{
@@ -526,17 +582,14 @@ main{
     font-size: 1.1em;
     font-family: Raleway;
     line-height: 1.5;
+  
 
 }
 
 .grid-section h1{
     font-size: 2em;
     font-family: Raleway;
-}
-
-figure{
-    width: 100%;
-    /* border: 1px solid green; */ 
+    
 }
 
 
@@ -546,17 +599,21 @@ figure{
     height: 100%;
     display: flex;
     flex-direction: column;
+    grid-column: 1/3;
     /* border: 1px solid red; */
 }
 
+.item1{
+    grid-column: 1/3;
+}
 
 .item2{
-    grid-column: 2/4;
+    grid-column: 3/5;
     
 }
 
 .item3{
-    grid-column: 4/6;
+    grid-column: 5/7;
     
 }
 
@@ -615,39 +672,41 @@ figure{
 }
 
 .title-row{
-    width: 640px;
+    width: 55%;
     height: 90px;
     /* border:1px solid snow; */
 }
 button{
-    width: 240px;
+    width: 20%;
     height: 90px;
     border: 1px solid snow;
     font-size: 18px;
     font-weight: 700;
     color: rgb(​ 32, ​ 34, ​ 66);
     background-color: rgb(255,225,62);
+    cursor: pointer;
 
 }
 
-.title-row h1{    
-width: 640px;
-height: auto;
-color: rgb(255,255,255);
-font-weight: 700;
-line-height: 1.5em;
+.title-row h1, .title-row h3{    
+
+    height: auto;
+    color: rgb(255,255,255);
+    font-weight: 700;
+    line-height: 1.5em;
 }
 
 .title-row h3{
-    width: 380px;
-    height: 20px;
     color:rgb(103,104,123) ;
 }
 
 .main-row{
+    display: flex;
+    align-items: flex-end;
     position: relative;
     width: 100%;
     height: 670px;
+    color: white;
     background-color: rgb(32,34,66);
     opacity: 0.9;
    
@@ -655,34 +714,54 @@ line-height: 1.5em;
 
 .map{
     position: absolute;
-    width: 62%;
-    height: 62%;
+    width:60%;
+    height: 60%;
     top:95px;
-    left: 120px;
-    background: url(../img/mapbg.png) center center;
-    background-size: cover;
-    opacity: 0.8;
-    /* border: 1px solid red; */
+    left: 100px;
+    background: url(../img/mapbg.png) center center no-repeat;
+    background-size:contain;
+   
 
+}
+
+.map-marker{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 230px;
+    right: -70px;
+    width: 260px;
+    height: 45px;
+    font-family: Raleway;
+    font-size: 18px;
+    
+}
+
+.marker{
+    width: 50px;
+    height:50px;
+       
+}
+.map-marker .textarea p{
+    width: 200px;
+    
 }
 
 .navigation-wrap{
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: flex-end;
     position: absolute;
-    top: 200px;
+    top: 120px;
     right: 120px;
     width: auto;
-    height:46%;
-    color: white;
+    height:55%;    
     font-family: Raleway;
+    /* border: 1px solid green; */
    
 }
-.navigation-wrap>h3{
-    border: 1px solid green;
-}
+
 
 .navigation{
     display: flex;
@@ -690,9 +769,9 @@ line-height: 1.5em;
     justify-content: center;
     align-items:flex-end;
     width: 100%;
-    height: 100%;
+    height: auto;
     list-style: none;
-    border: 1px solid red;
+    /* border: 1px solid red; */
   
 }
 .navigation>li{
@@ -701,29 +780,55 @@ line-height: 1.5em;
     align-items: center;
     width: 70px;
     height: 40px;
-    border: 1px solid yellow;
     border-bottom: 1px solid gray;
 }
 
 .navigation> li> a{
     
-    color: white;
+    color: inherit;
     text-decoration: none;
    
 }
 
-.navigation> li> a:hover{
+.navigation> li> a:hover, .navigation-wrap>a:hover{
 color: rgb(255,225,62);
+transform: translateX(-5px);
+transition: 0.2s ease-in-out;
 }
 
 .social{
     display: flex;
     list-style: none;
     justify-content: space-between;
-    width: 150px;
-    height: 40px;
-    border: 1px solid black;
-    filter: grayscale(50);
-    color: yellow;
+    width: 120px;
+    height: auto;
+    
+          
+}
+
+.navigation-wrap>a{
+    color: inherit;
+    text-decoration: none;
+    height: 20px;
+}
+
+
+
+
+
+.bottom-row{
+    width: 100%;
+    height:160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Raleway;
+    font-size: 14px;
+    line-height: 4;
    
 }
+.bottom-img{
+    width: 30px;
+    height: 30px;
+}
+

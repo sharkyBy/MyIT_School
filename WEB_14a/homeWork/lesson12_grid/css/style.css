@@ -20,7 +20,7 @@
     /*grid-template-columns: repeat(auto-fill, 50px);/*заполнение строки возможным кол-вом ячеек размером 50рх -остальное свободно если нечем  заполнять*/
    /* grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));/*заполнение строки возможным кол-вом ячеек размером 200рх/1fr--остальное свободно если нечем  заполнять*/
    /* grid-template-columns: repeat(auto-fit,50px);/*Действует подобно авто-фил*/
-   grid-template-columns: repeat(auto-fil,minmax(320px,1fr));/*Действует подобно авто-фил, но при наличии свободного пространства растягивает элементы, заполняя свободное место*/
+   grid-template-columns: repeat(auto-fit, minmax(320px,1fr));/*Действует подобно авто-фил, но при наличии свободного пространства растягивает элементы, заполняя свободное место*/
 
 /*Выравнивание элементов сетки: justify-items:(stretch, start, end, center); align-items(stretch, start, end, center)*/
 /*Для элементов сетки: align-self(stretch, start, end, center); justify-self(stretch, start, end, center)*/
