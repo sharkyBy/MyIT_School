@@ -12,7 +12,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
-    width: auto;
+    width: 100%;
     height: 150px;
     font-family: Raleway;
     /* border: 1px solid salmon; */
@@ -20,7 +20,7 @@
 
 .nav{
     font-size: 16px;
-    width:40%;
+    width:calc((100% -300px) * 0.4);
     height:auto;
     align-self: center;
     /* border: 1px solid red; */
@@ -28,15 +28,23 @@
 }
 
 .logo-header{
-    width: 24%;
-    height: auto;
+    width: 300px;
+    height: 40px;
     align-self: center;
+    background: url(../img/logo.png) center center no-repeat;
+    background-size: contain;
     
+    
+}
+.logo-header a{
+    display: block;
+    widows: 100%;
+    height: 100%;
 }
 
 .help{
-    width: 27%;
-    height: auto;
+    width: calc((100% - 300px) * 0.32);
+    height: 80px;
     align-self: center;
     
 }
@@ -45,7 +53,7 @@
 
 .nav-menu{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     list-style: none;
     width: 100%;
     height: 100%;
@@ -78,7 +86,7 @@
 
 .text{
     font-family:  Raleway;
-    font-size: 0.85em;
+    font-size: 14px;
 }
 
 .btn{
@@ -102,8 +110,8 @@
 }
 
 .btn li{
-    width: 36%;
-    height: 2.5em;
+    width: 120px;
+    height: 40px;
     /* border: 1px solid red; */
 }
 
@@ -151,13 +159,19 @@
     height:740px;   
     /* border: 1px solid green; */
 }
-
-.img-container >img{
+.img-wrap{
+    width: 100%;
+    height: 100%;
+    background: url(../img/homebg.jpg) center center no-repeat;
+    background-size: cover;
+    filter: brightness(0.8);
+}
+/* .img-container >img{
     width: 100%;
     height: 100%;    
     filter: brightness(0.8);
-    /* filter: grayscale(50%); */
-}
+    filter: grayscale(50%);
+} */
 
 .img-container>h1 {
     position: absolute;
@@ -192,8 +206,9 @@
     box-sizing: border-box;
     width: 40%;
     height: 10%;
-    bottom: 12%;
+    bottom: 100px;
     border: 16px solid rgb(221,221,221);
+    font-size: 18px;
     /* border: 1px solid red; */
 }
 
@@ -203,6 +218,7 @@
     padding: 2%;
     outline-style: none;
     border: none;
+    font-size: inherit;
 }
 
 #mail{
@@ -211,6 +227,7 @@
     border: none;
     outline-style: none;
     background-color: rgb(255,225,62);
+    font-size: inherit;
    
 }
 
@@ -222,6 +239,7 @@
     cursor: pointer;
     outline-style: none;
     background-color:rgb(255,225,62); 
+    font-size: inherit;
     
 }
 
@@ -529,9 +547,9 @@ main{
     width: 90%; 
     height:500px;
     display: grid;
-    grid-template: 1fr 1.2fr /repeat(auto-fit,minmax(100px,1fr));
+    grid-template: 1fr 1.2fr / repeat(6,1fr);
     grid-gap: 40px 20px;
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 
