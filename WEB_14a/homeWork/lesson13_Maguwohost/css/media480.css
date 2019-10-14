@@ -1,0 +1,323 @@
+
+
+@media  (max-width:480px){
+/* start header property */
+
+
+    .head-container{
+        display: block;
+        justify-content:flex-start; 
+        height: 80px;
+        width: 100%;
+                   
+    }
+
+    .logo-header{         
+        width:100%;
+        height: 40px; 
+        background: url(../img/logo.png) left 10px center no-repeat, rgb(255,225,62);
+
+    }
+    
+    .nav{  
+        position: absolute;
+        top:5px;
+        right: 10px;
+        width: 40px;
+        height: 30px;
+        border: 1px solid rgb(32,34,66);
+        border-radius: 25%;
+        font-size: 14px;
+        background: url(../img/menubuttonofthreelines_79781.png) center center no-repeat, rgb(255,225,62)  ;
+        background-size: 70%;
+        z-index: 2; 
+        
+        
+    }
+    .nav-menu{
+        display:none;
+        position: relative; 
+        top: 40px;
+        right: 55px;   
+        width: 90px;
+        height: auto;
+        z-index: 2;
+        background-color: rgb(32,34,66);      
+    }
+
+    .nav-menu li{
+        justify-content: flex-end;
+        width: 100%;
+        height: 25px; 
+        padding-right: 5px;   
+        border-bottom: 1px solid white;
+    }    
+   
+    .nav-menu li a{
+        justify-content: flex-end;       
+        color: rgb(255,225,62);
+        
+    }
+
+    .nav:hover .nav-menu{
+        display: block;
+        }
+
+    .nav:hover .help{
+        display: none;
+    }
+
+    .help, .btn-wrapper{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        width: 100%;
+        height: 40px; 
+        background-color: rgb(32,34,66);
+        z-index: 1;      
+    }
+        
+    .text{
+      
+        width: 60%;
+        height: 40px;
+        color: rgb(255,225,62);
+        font-size: 12px;
+        
+        
+    }
+    .text>span{
+        display: flex;
+        height: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        padding-right: 15px;
+    }
+    .btn{
+        justify-content: flex-start;
+        width:40%;
+        height: 40px;
+        /* border: 1px solid red; */
+        
+    }
+.btn i{
+    display: none;
+}
+
+    .btn li:first-child{
+        align-self: center;
+        width: 70px;
+        height: 30px;
+        border-radius: 15px;
+        font-size: 12px;
+      
+        
+    }
+    .btn li:last-child{
+        align-self: center;
+        width: 30px;
+        height: 30px;
+        border: 1px solid white;
+        border-radius: 50%;
+        margin-left: 20px;
+        background: url(../img/phone_handset_icon_125195\ 1.png) center center no-repeat, rgb(255,225,62);
+        filter: contrast(2);
+    }
+   
+    .btn span{
+        display: none;
+    }
+    /* end header property */
+
+    /* Start main property */
+
+    .img-container{
+        width: 100%;
+        height: 200px;
+        max-height: 300px;
+    }
+    .img-wrap{
+        display: block;
+        width: 100%;
+        height: 100%;       
+       
+    }
+
+    .img-container h1{
+        top: 20px;
+        font-size: 14px;
+        
+    }
+    .img-container h3{
+        top: 40px;
+        font-size: 12px;
+    }
+
+    .logo-img{
+        top: 40px;
+        width: 40px;
+        height: 40px;
+    }
+    .input{
+        bottom: 20px;
+        width: 85%;
+        height: 30px;
+        border: 2px solid rgb(221,221,221);
+        font-size: 10px;
+    }
+
+    .input [type="submit"]{
+       font-size: smaller;
+    }
+    #mail{
+        width: 20%;
+    }
+
+    .service-container{
+        display: block;
+        height: 400px;
+    }
+    .webhost, .domain{
+        padding: 5px;
+        width: 100%;
+        height: 50%;
+        font-size:10px 
+    }
+    .webhost img{
+        width: 5em;
+        height: 5em;
+    }
+    .webhost>section>p, .domain>section>p{
+        left: 0px;
+        width: 100%;
+        
+    }
+    .domain>span{
+        height: auto;
+      font-size: 5em;
+    }
+
+    .feature-container{
+        font-size: 10px;
+        width: 100%;
+        height: auto;
+    }
+    .feature-header{
+        height: 5em;
+        line-height: 1;
+        /* border: 1px solid red; */
+    }
+
+    .feature-section{
+        height: 360px;
+        
+    }
+    .section{
+        width: 50%;
+        height: 180px;
+        /* border: 1px solid red; */
+    }
+    .section img{
+        width: 48px;
+        height: 48px;
+    }
+
+    .grid-container{
+        width: 100%;
+        height: auto;
+        grid-gap: 10px;
+        grid-template-rows: 0.7fr repeat(5,1.0fr);
+       
+    }
+    .grid-section{
+        grid-column: -1/1;
+        font-size: 10px;
+        padding-left: 10px;
+    }
+    .img1, .img3{
+       
+        grid-column: 1/4;
+       
+    }
+    .img2, .img4{
+             
+        grid-column: 4/7;
+    }
+    .grid-wrapper{
+        height: 150px;
+        grid-column: -1/1;
+        padding: 10px 0;
+        font-size: 0.8em;
+        
+    }
+    .grid-wrapper .comment-img{
+
+        width: 50px;
+        height: 50px;
+        top: 90px;
+        right: 40px;
+        overflow: hidden;
+        background: url(../img/cl1.jpg) center center;
+        background-size: cover;
+               
+    }
+
+    .top-row{
+        justify-content: center;
+        height: 150px;
+    }
+    .title-row{
+        width: 90%;
+        height: 70px;
+        font-size: 10px;
+    }
+    button{
+        width: 100px;
+        height: 30px;
+        font-size: 12px;
+    }
+    
+    .main-row{
+        font-size: 10px;
+        height: 280px;
+       
+    }
+    .map{
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 200px;
+     }
+
+     .map-marker{
+         left:calc(75% - 150px*0.8) ;
+         top: calc(57% + 7vw/2 - 7vw*0.4);
+     }
+
+     .textarea {
+         order: -1;
+               
+     }
+
+
+     .navigation, .navigation-wrap>h3{
+         display: none;
+     }
+
+     .navigation-wrap{
+         top: 200px;
+         right: 10px;
+         height: 60px;
+     }
+     .social img{
+         width: 80%;
+         height: 90%;
+
+     }
+
+     .bottom-row{
+         height: 80px;
+         font-size: 10px;
+         
+     }
+}
