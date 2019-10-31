@@ -8,6 +8,20 @@
     <title>button</title>
 </head>
 <body>
+        <style>
+                .Green1 {
+                  background: green;
+                  width: 130px;
+                  height: 130px;
+                  transition: .5s;
+                }
+                #chetyre2:checked ~ .Green1 {
+                  background: yellow;
+                }
+                #chetyre3:checked ~ .Green1 {
+                  background: red;
+                }
+                </style>
     <!-- Способ использования чекбокса: Так работает, при этом не важно на каком
         блоке произойдет клик - враппер или экзампл - фон изменится. -->
     <!-- <label class="wrapper">
@@ -47,4 +61,11 @@
 
 
 </body>
+<div class="proba">
+        <input type="radio" checked="checked" name="chetyre"/>
+         <input type="radio" name="chetyre" id="chetyre2"/> 
+         <input type="radio" name="chetyre" id="chetyre3"/>
+        <div class="Green1"></div>
+</div>
+
 </html>
