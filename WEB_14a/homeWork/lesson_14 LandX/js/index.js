@@ -2,7 +2,14 @@ console.log(document);
 console.log(document.getElementById("price2"));
 console.log(document.getElementsByClassName("video-img"));
 console.log(document.getElementsByTagName("input"));
+<<<<<<< HEAD
 
+=======
+let a;
+a=document.getElementById("price1");
+console.log(a);
+console.log(typeof(a));
+>>>>>>> 6b55e006f42a30dd1f1715cc9e0ae423e941ffab
 let myString="stroka";
 console.log(typeof(myString));
 let myNumber=2345;
@@ -37,6 +44,7 @@ myString="2355";
 let example=+myString-myNumber;
 console.log(example);
 console.log(typeof(example));
+<<<<<<< HEAD
 let a=3; let b=4; let c=7;
 
 console.log("a " + "+ b" + " - " + "c"+" = "+(a+b-c));
@@ -143,5 +151,11 @@ if(k>d){
 
 //5
 (k<d)||(k>b) ? console.log(1) : k=k+b;
+=======
+
+
+
+
+>>>>>>> 6b55e006f42a30dd1f1715cc9e0ae423e941ffab
 
 
