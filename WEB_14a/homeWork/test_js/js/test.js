@@ -3,7 +3,6 @@
 // console.log(document.getElementsByClassName("video-img"));
 // console.log(document.getElementsByTagName("input"));
 
-
 // let a;
 // a=document.getElementById("price1");
 // console.log(a);
@@ -120,7 +119,7 @@
 /*Оператор оператор ? однострочный:*/
 // (a<b) ? console.log("а = 3 < b = 4 " + (a<b));
 /*Многострочный оператор ?*/
-// (a>b) ? console.log(a>b): 
+// (a>b) ? console.log(a>b):
 // (a>d) ? console.log(a>d):
 // (a<f) ? console.log(a<f):
 // (a>f) ? console.log(a>f):console.log("a = 3 > f = 2 "+(a>f));
@@ -130,10 +129,10 @@
 // let  k=a+b;
 // (k>d) ? console.log(1) : console.log(k);
 // //2
-// (k>d) ? console.log(1) : 
+// (k>d) ? console.log(1) :
 // (k<d) ? console.log(2) : console.log(k);
 // //3
-// (k>d) ? console.log(1) : 
+// (k>d) ? console.log(1) :
 // (k<d) ? console.log(2) : console.log(k);
 //4
 // (k>d) ? console.log(1):console.log(k);
@@ -151,43 +150,213 @@
 //5
 // (k<d)||(k>b) ? console.log(1) : k=k+b;
 
-// function validatePIN (pin) {
-    
-//     return /^(\d{4}|\d{6})$/.test(pin);
-// }
-   
-//   console.log(validatePIN("1234")) ;
+function validatePIN (pin) {
+
+    return /^(\d){4}$|(\d){6}$/.test(pin);
+}
+
+  console.log(validatePIN("1234")) ;
 //Создание массива элементов по тегу div
-  let arr=[];
-  console.log(arr.length);
-  arr=document.getElementsByTagName("div");
-  console.log(arr.length);
-  console.log(arr)
+// let arr=[];
+// console.log(arr.length);
+// arr=document.getElementsByTagName("div");
+// console.log(arr.length);
+// console.log(arr)
 //Функция выбора из массива четных или нечетных элементов
 //и изменения свойства border
-  function calcIndex(arr){
-      for (let i=0; i<arr.length;i++){
-          if(i%2==0) {
-              arr[i].style.border="5px solid white";
-            } 
-          else{
-              arr[i].style.border="5px solid red";
-            }
-      }
-      return arr;
-  }
+// function calcIndex(arr){
+//     for (let i=0; i<arr.length;i++){
+//         if(i%2==0) {
+//             arr[i].style.border="5px solid white";
+//           }
+//         else{
+//             arr[i].style.border="5px solid red";
+//           }
+//     }
+//     return arr;
+// }
+
+//  calcIndex(arr);
+//  let arr2=[];
+//  arr2=document.getElementsByTagName('li');
+//  console.log(arr2);
+//  calcIndex(arr2);
+//  let arr3=[];
+//  arr3=document.getElementsByTagName("a");
+//   console.log(arr3);
+//Назначаем элементу из массива класс средствами js
+// arr3[2].className+=" otherClass";
+// console.log(arr3[2]);
+
+// let mass = [null, 2, "яблоки", "груши", 4, 7, 3];
+
+//Способ
+//   for (let i=0;i<mass.length;i++){
+//     console.log(typeof(mass[i]));
+//     if(typeof(mass[i])==='number' ||typeof(mass[i])==='boolean' ||typeof(mass[i])==='undefined' ||typeof(mass[i])==='object'){
+//     switch(mass[i]){
+//       case 1:
+//       mass[i]='киви';
+//       break;
+//       case 2:
+//       mass[i]='апельсин';
+//       break;
+//       case 3:
+//       mass[i]='яблоки';
+//       break;
+//       case 4:
+//       mass[i]='груши';
+//       break;
+//       default:mass[i]=typeof(mass[i]);
+//       break;
+//     }
+
+//   }
+// }
+//   console.log(mass);
+// function sum(val) {
+//   let rez = val * 2;
+//   return rez;
+// }
+// let newRez = sum(4);
+// console.log(newRez);
+
+// let masive = [1, 3, 5, 7, 9];
+// let newMassive = masive.map(function(t, i, arr) {
+//   console.log(t);
+//   console.log(i);
+//   console.log(arr);
+//   let rez = t * 6;
+//   return rez;
+// });
+// console.log(newMassive);
+
+// //execution method 1
+// let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(m => m.length);
+// console.log(lengths);
+
+// //execution method 2
+// let line=["Fill", "Jon", "Martin"]
+// let newLine=line.map(function(s){
+//   let stringLeghts=s.length;
+//   return stringLeghts;
+// });
+// console.log(newLine);
+
+//codewars example
+
+
+// 1
+// function howMuchILoveYou(nbPetals) {
+//   let arr=['I love you','a little', 'a lot', 'passionately', 'madly', 'not at all',];
+//  return arr[(nbPetals - 1) % arr.length];
+ 
+// }
+
+//2
+// function howMuchILoveYou(nbPetals) {
+//   let arr=['I love you','a little', 'a lot', 'passionately', 'madly', 'not at all',];
+//  for (let i=0;i<arr.length-1;i++){
+//    return arr[(nbPetals-1) % arr.length]
+//  }
+ 
+// }
+
+//3
+// function howMuchILoveYou(nbPetals) {
+//   let arr=['I love you','a little', 'a lot', 'passionately', 'madly', 'not at all',];
+//   let check=(nbPetals-1)%arr.length;
+//   switch(check){
+//    case 0: return (arr[check]);
+//    break;
+//    case 1: return (arr[check]);
+//    break;
+//    case 2: return (arr[check]);
+//    break;
+//    case 3: return (arr[check]);
+//    break;
+//    case 4: return (arr[check]);
+//    break;
+//    case 5: return (arr[check]);
+//    break;
+//    default: return ('non-natural numbers or less or zero');
+//    break;
+//  }
+ 
+// }
+
+
+// let sub=howMuchILoveYou(-22);
+// console.log(sub);
+//Вывод символов кодировки ANSII
+// function getChar(c){
+//   return String.fromCharCode(c);
+// }
+// console.log(getChar(77));
+
+// function squareArea(A){
+//   let sq=2 * A / Math.PI;
+//   sq = sq ** 2; 
+//     return sq.toFixed(2);
+//   }
+//   let ress=squareArea(14.05);
+//   console.log(ress);
+//   console.log(typeof(ress));
+
+//example
+
+//Условие: есть массив целых чисел. Записать массив из заданного, при условии
+//целочисленного деления значения ячейки массива на индекс ячейки
+//Способ 1
+
+  // let array = [22, -6, 32, 82, 9, 25 ];
+  // let newArray = array.filter( function(item,i){ return item % i == 0; } );
+  // console.log(newArray);
+
+
+// Способ 2
+// function multipleOfIndex(array){  
+// let result=array.filter(function(item,i){
+//    return item % i == 0 ; 
+// });
+//   return result;
   
-   calcIndex(arr);
-   let arr2=[];
-   arr2=document.getElementsByTagName('li');
-   console.log(arr2);
-   calcIndex(arr2);
-   let arr3=[];
-   arr3=document.getElementsByTagName("a");
-    console.log(arr3);
-    //Назначаем элементу из массива класс средствами js
-    arr3[2].className+=" otherClass";
-    console.log(arr3[2]);
+// }
+
+// let array=[22, -6, 32, 82, 9, 25,];
+// console.log(multipleOfIndex(array));
+
+//Способ 3
+
+// function multipleOfIndex(arr){    
+//   let newArr = [];  
+//     for (let i = 1; i < arr.length; i++){         
+//       if(arr[i] % i == 0){
+//          newArr.push(arr[i]);                 
+//       }        
+//     }  
+//     return newArr;     
+//   }
+//   let arr=[22, -45, 32, 82, 9, 25];
+//   console.log(multipleOfIndex(arr));
+    
 
 
+//    function stringToArray(str){
+//      let arr=str.split(' ');
+//      return arr;
+//    }
+//     let str="I love arrays they are my favorite";
+//     console.log(stringToArray(str));
+//     console.log(typeof(stringToArray(str)));
 
+//След пример
+function take(arr, n) {
+  let newArr=arr.slice(0,n);
+  return newArr;
+}
+let arr=[0, 1, 2, 3, 5, 8, 13];
+let n=3;
+console.log(take(arr,n));
+
+//Сдед пример. Проверить имя пользователя (от 4 до 16 символов включительно сост из букв a-z, 0-9 и _ )
