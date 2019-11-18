@@ -150,12 +150,12 @@
 //5
 // (k<d)||(k>b) ? console.log(1) : k=k+b;
 
-function validatePIN (pin) {
+// function validatePIN (pin) {
 
-    return /^(\d){4}$|(\d){6}$/.test(pin);
-}
+//     return /^(\d){4}$|(\d){6}$/.test(pin);
+// }
 
-  console.log(validatePIN("1234")) ;
+//   console.log(validatePIN("1234")) ;
 //Создание массива элементов по тегу div
 // let arr=[];
 // console.log(arr.length);
@@ -351,12 +351,159 @@ function validatePIN (pin) {
 //     console.log(typeof(stringToArray(str)));
 
 //След пример
-function take(arr, n) {
-  let newArr=arr.slice(0,n);
-  return newArr;
-}
-let arr=[0, 1, 2, 3, 5, 8, 13];
-let n=3;
-console.log(take(arr,n));
+// function take(arr, n) {
+//   let newArr=arr.slice(0,n);
+//   return newArr;
+// }
+// let arr=[0, 1, 2, 3, 5, 8, 13];
+// let n=3;
+// console.log(take(arr,n));
 
 //Сдед пример. Проверить имя пользователя (от 4 до 16 символов включительно сост из букв a-z, 0-9 и _ )
+// function validateUsr(username) {
+//   let res =  /^([\da-z_]{4,16})$/.test(username);
+//   return res;
+// }
+// let username='kgfhfhg_121_uiio';
+// console.log(validateUsr(username));
+
+// let num=Number('258');
+// console.log(num);//258
+// console.log(typeof(num));//number
+
+// let str=String (258);
+// console.log(str);//'258'
+// console.log(typeof(str));//string
+
+// let bool=Boolean('258');
+// console.log(bool);//true
+// console.log(typeof(bool));//boolean
+
+// function countingValleys(s) {
+//   let count=0; let str=0;
+//      for(let i=0; i<s.length;i++){
+//     console.log(s[i]);
+//     switch(s[i]){     
+//     case 'U': str = str + 1;   
+//     break;
+//     case 'F': str = str + 0;  
+//     break;
+//     case 'D': str = str - 1;  
+//     break;
+//     default: str = str + 0;  
+//     break;     
+//     }   
+
+//     if(str > 0){count=0;
+    
+//     }else if(str===0){
+//       count=count+0;
+//     }
+//     else{
+//       count = str+1; 
+//     }
+//     console.log(str,count);
+    
+    
+//   }
+//   return count; 
+//   }
+
+//   let s='FFUDUUDDDDDFUFDUUUUU';
+//   console.log(countingValleys(s))
+
+
+//изменение регистра первой буквы слова
+// let str='вася';
+// let newStr=str[0].toUpperCase()+str.slice(1);
+
+// console.log(newStr);
+
+
+//клонирование объекта
+
+// let user={
+//   name: 'Valik',
+//   age: 46,
+//   weight: 105,
+//   height: 182,
+//   eyeColor: 'gray',
+
+// }
+
+// let clone={};
+// for (let key in user){
+//   clone[key] = user[key]; //скопировали  ключи и значения
+  
+// }
+// console.log(clone);
+
+//example 1
+//Добавление свойств, изменение свойств, удаление свойств
+// let user={};
+// user.name='John';
+// user.surName='Smith';
+// console.log(user);
+// user.name='Pete';
+// console.log(user);
+// delete user.name;
+// console.log(user)
+
+//example 2
+//Определяем наличие каких либо свойств у объекта
+// function isEmpty(obj){
+//   for(let key in obj){
+//     return false;
+//   }
+//   return true;
+// }
+// let schedule={};
+// let obj=schedule;
+// console.log(isEmpty(obj));
+
+// schedule['8:30']='get up';
+// console.log(schedule)
+// console.log(isEmpty(obj));
+
+//example 3
+// Проверка на пустоту и суммирование свойств
+
+// function salar(obj){
+//   let sum=0;
+//   for(let key in obj){
+//      sum+=obj[key];   
+//   }
+//   return sum;
+// }
+
+// let salaris={};
+// let obj=salaris;
+// console.log(salar(obj));
+
+// salaris.John=100;
+// salaris.Ann=160;
+// salaris.Pete=130;
+// console.log(obj);
+// console.log(salar(obj));
+
+//example 4
+// Проверка на числа и умножение на 2 значений свойств
+
+function multiplyNumeric(obj){
+  for (let key in obj){
+    if(typeof obj[key] =='number'){
+      obj[key] *= 2;
+    } 
+  }
+  // return obj;
+}
+
+let menu={
+  width: 200,
+  heigth: 300,
+  title: 'My menu',
+}
+
+let obj=menu;
+multiplyNumeric(obj);
+console.log((obj));
