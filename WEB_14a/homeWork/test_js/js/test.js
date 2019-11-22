@@ -705,7 +705,7 @@ function dblClickSpan(event){
 } */
 
 //Метод reduce для получения суммы числовых элементов массива
-let mass=['a','b',22,34,'e','f',3];
+// let mass=['a','b',22,34,'e','f',3];
 
 
 //1способ
@@ -758,3 +758,76 @@ while(true){
 }
 console.log(ar);   */
 
+// a=1; b=2; c=3; d=4; e=5; f=6;
+
+// let str = /^[a-z]$/;
+// console.log(str.test('x'));
+// let a;
+// let arr=String.fromCharCode(98);
+// console.log(arr);
+
+// let str='abcde';
+// console.log(str.charCodeAt(1));
+// let arr=str;
+
+
+/* let arr=['a','c','d'];
+function getChar(arr){
+let newArr=[]; 
+let res; 
+let total;
+// let str=arr.join('');
+if(arr==0){newArr.push(arr);};
+ 
+  for(let i=0; i<arr.length ; i++) {       
+        newArr.push(arr[i].charCodeAt(arr[i])-96);             
+      }
+       res=newArr.reduce((a,b) => a+b);
+      // console.log(res);
+      if (res>26){res=res-26;};
+       total=String.fromCharCode(res+96);
+      
+      if(res == 0){total = 'z'}
+      return [total];  
+}
+
+console.log(getChar(arr)); */
+
+/* function getChar(...letters){
+  let alfabet='abcdefghijklmnopqrstuvwxyz';
+  let summ=0;
+  if(letters.length>0 ){
+    for(let i=0;i<letters.length;i++){
+      summ+=alfabet.indexOf(letters[i])+1;
+    }
+  }else{
+    return 'z';
+  }
+  if(summ>26){
+    summ = summ %26;
+  }
+  if(summ===0){
+    return 'z';
+  }
+
+  summ = summ-1;
+  return alfabet[summ]
+}
+console.log(getChar('y','s','g')) */
+
+
+//массив чисел.... Упорядочить в порядке убывания и считать сумму разностей между эл-ами
+//[1-2]+[2-3]+[3-4]+...+[n-1 - n]
+
+
+let arr=[2,1,10];
+function sumOfDifferences(arr) { 
+  arr.sort((a,b) => a-b)
+     .reverse();
+     let summ=arr[0];
+     for(let i=1; i<arr.length;i++){
+        summ-=arr[i];
+     }
+}
+sumOfDifferences(arr);
+console.log(arr);
