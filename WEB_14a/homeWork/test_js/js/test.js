@@ -128,16 +128,24 @@
 //1
 // let  k=a+b;
 // (k>d) ? console.log(1) : console.log(k);
+
 // //2
+
 // (k>d) ? console.log(1) :
 // (k<d) ? console.log(2) : console.log(k);
+
 // //3
+
 // (k>d) ? console.log(1) :
 // (k<d) ? console.log(2) : console.log(k);
+
 //4
+
 // (k>d) ? console.log(1):console.log(k);
 // (k<d) ? console.log(1):k=d;
+
 //4 через if
+
 // if(k>d){
 //     console.log(1)
 // }else if(k<d){
@@ -148,6 +156,7 @@
 // }
 
 //5
+
 // (k<d)||(k>b) ? console.log(1) : k=k+b;
 
 // function validatePIN (pin) {
@@ -156,14 +165,18 @@
 // }
 
 //   console.log(validatePIN("1234")) ;
+
 //Создание массива элементов по тегу div
+
 // let arr=[];
 // console.log(arr.length);
 // arr=document.getElementsByTagName("div");
 // console.log(arr.length);
-// console.log(arr)
+// console.log(arr);
+
 //Функция выбора из массива четных или нечетных элементов
 //и изменения свойства border
+
 // function calcIndex(arr){
 //     for (let i=0; i<arr.length;i++){
 //         if(i%2==0) {
@@ -184,6 +197,7 @@
 //  let arr3=[];
 //  arr3=document.getElementsByTagName("a");
 //   console.log(arr3);
+
 //Назначаем элементу из массива класс средствами js
 // arr3[2].className+=" otherClass";
 // console.log(arr3[2]);
@@ -232,10 +246,12 @@
 // console.log(newMassive);
 
 // //execution method 1
+
 // let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(m => m.length);
 // console.log(lengths);
 
 // //execution method 2
+
 // let line=["Fill", "Jon", "Martin"]
 // let newLine=line.map(function(s){
 //   let stringLeghts=s.length;
@@ -359,7 +375,25 @@
 // let n=3;
 // console.log(take(arr,n));
 
+//Важно!!!!  Метод filter только проверяет условие, сортирует массив и не выполняет никаких действий.
+//Изменить элемент массива методом map.
+
+// let arr = [14, 2, "d", 12, -3];
+// let newArr = arr
+//   .filter(function(item) {
+//     if (typeof item == "number") {
+//       return item;
+//     }
+//   }).map(function(item) {
+//     return item * 5;
+//   });
+
+// console.log(newArr);
+
+
+
 //Сдед пример. Проверить имя пользователя (от 4 до 16 символов включительно сост из букв a-z, 0-9 и _ )
+
 // function validateUsr(username) {
 //   let res =  /^([\da-z_]{4,16})$/.test(username);
 //   return res;
@@ -367,6 +401,12 @@
 // let username='kgfhfhg_121_uiio';
 // console.log(validateUsr(username));
 
+//Отфильтровать числа, отсортировать в порядке возрастания, числа умножить на 4.
+// let arr=[22,2,1,'a',17];
+// arr.filter(function(item){if(typeof item=='number'){return item}}).sort((a,b)=>a-b).map((item)=>item*4);
+// console.log(arr);
+
+//Примитивные ипы данных
 // let num=Number('258');
 // console.log(num);//258
 // console.log(typeof(num));//number
@@ -379,38 +419,40 @@
 // console.log(bool);//true
 // console.log(typeof(bool));//boolean
 
-// function countingValleys(s) {
-//   let count=0; let str=0;
-//      for(let i=0; i<s.length;i++){
-//     console.log(s[i]);
-//     switch(s[i]){     
-//     case 'U': str = str + 1;   
-//     break;
-//     case 'F': str = str + 0;  
-//     break;
-//     case 'D': str = str - 1;  
-//     break;
-//     default: str = str + 0;  
-//     break;     
-//     }   
+//Посчитать количество ямм пример с codewars 'Counting
 
-//     if(str > 0){count=0;
-    
-//     }else if(str===0){
-//       count=count+0;
-//     }
-//     else{
-//       count = str+1; 
-//     }
-//     console.log(str,count);
-    
-    
-//   }
-//   return count; 
-//   }
+/* function countingValleys(s) {
+  let count=0; let str=0;
+     for(let i=0; i<s.length;i++){
+    console.log(s[i]);
+    switch(s[i]){     
+    case 'U': str = str + 1;   
+    break;
+    case 'F': str = str + 0;  
+    break;
+    case 'D': str = str - 1;  
+    break;
+    default: str = str + 0;  
+    break;     
+    }   
 
-//   let s='FFUDUUDDDDDFUFDUUUUU';
-//   console.log(countingValleys(s))
+    if(str > 0){count=0;
+    
+    }else if(str===0){
+      count=count+0;
+    }
+    else{
+      count = str+1; 
+    }
+    console.log(str,count);
+    
+    
+  }
+  return count; 
+  }
+
+  let s='FFUDUUDDDDDFUFDUUUUU';
+  console.log(countingValleys(s)) */
 
 
 //изменение регистра первой буквы слова
@@ -489,21 +531,230 @@
 //example 4
 // Проверка на числа и умножение на 2 значений свойств
 
-function multiplyNumeric(obj){
-  for (let key in obj){
-    if(typeof obj[key] =='number'){
-      obj[key] *= 2;
-    } 
-  }
+// function multiplyNumeric(obj){
+//   for (let key in obj){
+//     if(typeof obj[key] =='number'){
+//       obj[key] *= 2;
+//     } 
+//   }
   // return obj;
+// }
+
+// let menu={
+//   width: 200,
+//   heigth: 300,
+//   title: 'My menu',
+// }
+
+// let obj=menu;
+// multiplyNumeric(obj);
+// console.log((obj));
+
+//Ключевое слово this
+
+// let user={
+//   name:'john',
+//   age:30,
+//   sayHi(){
+//     alert(this.name);
+//     return this.name;
+//   }
+// }
+// console.log(user);
+// let sayHi = user.sayHi();
+// console.log(sayHi);
+
+//Для чего лучше использовать this
+//В js  используем не сам объект, а ссылку на объект, которая хранится в переменной.
+// Создав переменную и передав в нее ссылку на объект, а затем изменив переменную,
+//теряем ссылку на объект, т.е. объект есть, но ссылки на него по каким -то причинам нет
+//Ключевое слово this, расположенное внутри данного объекта обратится к объекту, а не
+//к переменной объекта
+/* let user = {
+  name: "Джон",
+  age: 30,
+  sayHi() {
+    alert( user.name ); // приведёт к ошибке. Если заменить user на this - ошибки не будет
+  }
+
+};
+let admin = user;
+user = null; // обнулим переменную для наглядности, теперь она не хранит ссылку на объект.
+admin.sayHi(); // Ошибка! Внутри sayHi() используется user, которая больше не ссылается на объект!
+ */
+
+//Еще немного о this... Область видимости
+
+/* function arc(){
+   this.numb=20;
+   console.log(this.numb);
+   let asd = ()=>{
+     let numb = 40;
+     console.log(this.numb);//Выведет 20. У стрелочной функции нет своего this
+   }
+}
+arc(); */
+
+
+/* let ob={
+  color: 'red',
+  numb: 4,
+  click: function(){
+    this.color= 'black';
+    this.numb=17;
+    console.log(this.color, this.numb);
+  }
+}
+ob.click();
+console.log(ob.color, ob.numb,ob.click) */
+
+
+//Обработка событий клик:
+
+//1 способ
+
+/* function clickButton(){
+  console.log('Первый способ обработки события клик');
+
+} */
+
+//2 способ
+
+/* let col = document.getElementById('click_btn2');
+col.onclick=function(){
+   console.log('Второй способ обработки события клик');
+   col.style.color="red";
+} */
+
+//3 способ
+
+/* let call = document.getElementById('click_btn3');
+call.addEventListener('click', clickEvent);
+function clickEvent(event){
+  console.log('Третий способ обработки события клик');
+  call.removeEventListener('click',clickEvent);
+  console.log(event.target);
+} */
+
+// let tab = document.getElementById('table');
+// tab.addEventListener('click', clickTable);
+
+// function clickTable(event){
+//   console.log('Вызов таблицы');
+// console.log(event.target.tagName);
+// console.log(event);
+// tab.removeEventListener('click', clickTable);
+
+//Проверка условия на что нажата кнопка мыши
+//   if(event.target.tagName=='TD'){
+//     console.log(event.target.tagName);
+//   }
+// }
+
+//Всплытие событий наступит в случае применения свойства "онклик"
+//во всех элементах вложенности снизу до верху.
+//
+// function clickBtn1(){
+//   console.log('Проверка всплытия 1');
+// }
+
+// function clickBtn2(){
+//   console.log('Проверка всплытия 2');
+// }
+
+// function clickBtn3(){
+//   console.log('Проверка всплытия 3');
+// }
+
+//Изменение цвета текста элемента спан при клике и двойном клике
+//1 способ
+
+/* let spanClick = document.getElementById("example");
+spanClick.addEventListener("click", func);
+spanClick.addEventListener("dblclick", func);
+
+function func(event) {
+  console.log();
+  switch (event.type) {
+    case "click":
+      event.target.style.color = "green";
+      break;
+      case "dblclick":
+      event.target.style.color = "red";
+      break;
+  }
+} */
+
+//2 способ
+
+/* let spanClick = document.getElementById('example');
+spanClick.addEventListener('click',clickSpan);
+spanClick.addEventListener('dblclick',dblClickSpan);
+
+function clickSpan(event){
+  // console.log(event);
+  if(event.target.tagName == 'SPAN'){
+    event.target.style.color='red';
+  }
 }
 
-let menu={
-  width: 200,
-  heigth: 300,
-  title: 'My menu',
-}
+function dblClickSpan(event){
+  if(event.target.tagName=='SPAN'){
+    event.target.style.color='blue'
+  }
+} */
 
-let obj=menu;
-multiplyNumeric(obj);
-console.log((obj));
+//Метод reduce для получения суммы числовых элементов массива
+let mass=['a','b',22,34,'e','f',3];
+
+
+//1способ
+/* let rezMass = mass
+  .filter((value) => (typeof value == "number" ? value : false))
+  .reduce((a, b) => a + b);
+console.log(rezMass); */
+
+//2способ
+/* function filterSumm(mass) {
+  let newMass = mass
+    .filter(value => (typeof value == "number" ? value : false))
+    .reduce((a, b) => a + b);
+  return newMass;
+}
+console.log(filterSumm(mass)); */
+
+//Найти строки, изменить регистр строки, поменять местами
+
+/* let arr=['Anastation',3,5,'Nicolas'];
+
+function newArr(arr){
+let newArr = arr
+  .filter(item => (typeof item == 'string' ? item: false))
+  .map(val => val.toUpperCase().charAt(1))
+  .reverse();  
+  return newArr;
+}
+console.log(newArr(arr)); */
+    
+
+//Найти символы в строке начиная с начала строки
+
+/* let str='metallica nirvana karavan';
+
+let newStr=str.substring(1,4);//символы с 1го по четвертый
+console.log(newStr); 
+console.log(str.indexOf('van', 0));   //Поиск позиции совпадения начиная с 0
+ */
+
+//Поиск позиций всех совпадений словосочетания в строке
+
+/* let str = 'metallica nirvana karavan  mandarin';
+let pos=0; let ar=[];
+while(true){
+  let find = str.indexOf('an', pos);
+  if(find == -1) break;
+    pos = find + 1;    
+    ar.push(pos);  
+}
+console.log(ar);   */
+

@@ -101,4 +101,12 @@ main, footer {
     text-align: center;
    
 }
-
+#example{
+  font-size: 20px;
+  margin: 10px;
+  border: 1px solid black;
+  width: 90px;
+  height: 30px;
+  text-align: center;
+  user-select: none;
+}
