@@ -820,14 +820,41 @@ console.log(getChar('y','s','g')) */
 //[1-2]+[2-3]+[3-4]+...+[n-1 - n]
 
 
-let arr=[2,1,10];
+/* let arr=[];
 function sumOfDifferences(arr) { 
   arr.sort((a,b) => a-b)
-     .reverse();
-     let summ=arr[0];
-     for(let i=1; i<arr.length;i++){
-        summ-=arr[i];
+     .reverse();  
+     let diff ;
+
+     if(arr.length != 0){
+      let i=0; let j=arr.length-1;
+      diff = arr[i]-arr[j];       
+    }else{
+      diff = 0;
+    }
+    return diff;
+    // console.log(diff);
      }
-}
+     
 sumOfDifferences(arr);
-console.log(arr);
+console.log(arr); */
+
+/* let salary=1000; let bonus = false;
+
+function bonusTime(salary, bonus) {
+  bonus === true ? salary =`\u00A3`+ salary*10: salary =`\u00A3`+salary;
+  return salary;
+  }
+
+  bonusTime(salary,bonus);
+  console.log( bonusTime(salary,bonus)) */
+
+  function unusualFive() {
+    let str = charAt('a');
+    return str;
+    
+
+  }
+
+  
+  console.log(unusualFive())
