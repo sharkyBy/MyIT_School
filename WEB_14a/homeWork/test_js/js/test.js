@@ -849,7 +849,7 @@ function bonusTime(salary, bonus) {
   bonusTime(salary,bonus);
   console.log( bonusTime(salary,bonus)) */
 
-  function unusualFive() {
+ /*  function unusualFive() {
     let str = charAt('a');
     return str;
     
@@ -857,4 +857,93 @@ function bonusTime(salary, bonus) {
   }
 
   
-  console.log(unusualFive())
+  console.log(unusualFive()) */
+
+//Замена значения в строке
+  // let str='Hello, mr. Duglas';
+  // let newStr=str.replace('Duglas','name');
+  // console.log(newStr);
+
+
+  //Преобразование строки в массив
+  
+  /* let str1='Andrew, Alex, John';
+  let arr = str1.split(', ');
+  console.log(arr); */
+
+  //Преобразование массива в строку
+ /*  let newArr=arr.join(' ');
+  console.log(newArr);
+ */
+
+
+ //Склейка массивов
+ /* let massFirst=[1,2,3];
+ let massSecond = massFirst.concat([8,9]);
+ console.log(massSecond); */
+
+ // пример 1
+ /* let str1 = '3, 2, 4, 7';
+ let str2 = '11, 1, 5, 20';
+ let newArr1 = str1.split(', ');
+ let newArr2 = str2.split(', '); 
+ console.log(newArr1, newArr2);
+let newArr=newArr1;
+newArr=newArr.concat(newArr2);
+newArr=newArr.sort((a,b) => a - b);
+console.log(newArr);
+newArr.reduce((a,b) => summ = +a + +b);
+console.log(summ); */
+
+//пример 2
+/* let arr=["3;2;4;7", "11;1;5;20"];
+let str = arr.join(';')
+// str = str.replace(';',',');
+console.log(str);
+let newArr = str.split(';');
+console.log(newArr);
+newArr = newArr.sort((a,b) => a - b);
+console.log(newArr);
+newArr = newArr.reduce((a,b) => summ = +a + +b);
+console.log(summ); */
+
+//пример 2, но короче
+
+/* let arr=["3,2,4,7", "11,1,5,20"];
+let str = arr.join()
+            .split(',')
+            .map(item => parseInt(item))
+            .sort((a,b) => a - b)
+            .reduce((a,b) => a + b);
+console.log(str);
+ */
+
+ //Отсортировать массив, выбрать первое слово после сортировки, разбить на буквы, вставить звездочки
+ //пример: 'b***i***t***c***o***i***n'
+/* let s=["bitcoin", "take", "over", "the", "world", "maybe", "who", "knows", "perhaps"]; */
+
+ /* function twoSort(s) { */
+//Длинная запись*************
+ /*  s = s.sort(); //sort array
+  let str = s[0];//take a first element (string)
+  console.log(str);
+  str = str.split('');//convert to array
+  console.log(str);
+  str = str.join('***');// convert to string and замена разделителя на звездочки, 
+  console.log(str); */
+  // конец **************
+
+  //Короткая запись***********
+   /*  return s.sort()[0].split('').join('***'); */
+    
+    //конец************
+  /* }
+  
+  console.log(twoSort(s)); */
+
+//Написать функцию, которая рисует лестницу из букв "I"
+function drawStairs(n) {
+  
+}
+
+
