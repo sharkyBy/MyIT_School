@@ -942,8 +942,91 @@ console.log(str);
   console.log(twoSort(s)); */
 
 //Написать функцию, которая рисует лестницу из букв "I"
+/* let n = 0;
 function drawStairs(n) {
-  
+  let res = "";
+  let space ;
+  if(n!=0){
+  for(let i = 0 ;i<n;i++){
+    space = "\u0020";
+    for(let j = 0; j<i;j++){
+      space += "\u0020";
+    }
+    res +="I\n"+space;
+  }
+  return res.substr(0, res.length - space.length-1);
 }
+} */
 
+//Вариант из кодевара
+/* function drawStairs(n) {
 
+  let step = "I"
+  for(let i=1; i<n;  i++) {
+   step +="\n" + "\г0020".repeat(i) + 'I' ;
+  }return step 
+  }
+ */
+/* drawStairs(n)
+console.log(drawStairs(n)); */
+
+// always return 5
+
+/* function unusualFive() {
+  let str='abcdef'.indexOf('f');
+  return str;
+}
+console.log(unusualFive()); */
+
+// Вернуть массив чисел от мин до макс с шагом...
+/* let min=2; let max=10; let step=2;
+function generateRange(min, max, step){
+  let arr = []; let sum = min; 
+  while(sum <= max){
+    
+    let newArr = arr.push(sum);
+    sum +=step;    
+  }
+  return arr;
+  }
+  console.log(generateRange(min, max, step)); */
+
+  //вернуть одну либо другую фразу в зависимости от результата возведения в степень
+ /*  let x= '-20';
+  function apple(x){
+    let str = x => parseInt(x);    
+    let sum = x**2 > 1000 ?  'It\'s hotter than the sun!!': 'Help yourself to a honeycomb Yorkie for the glovebox.'
+    return sum;
+  }
+    apple(x);
+    console.log(apple(x)); */
+    
+//найти в строке число, вернуть правда или ложь
+    /* String.prototype.digit = function() {
+      return  /^\d$/.test(this); */
+      /*  return this.length == 1 ? /\d/.test(this): false; */ //тоже самое
+      /* }; */
+    /*  String='7';
+    console.log( String.digit());//или так вызвать
+    console.log('as2'.digit());//или так */
+   
+
+    //Перевернуть строку
+/* let str = 'valik'
+    function solution(str){
+      return str.split('').reverse().join('');
+    }
+
+    console.log(solution(str)) */
+
+    //Вернуть строку в зависимости от возраста.
+    //Длина функции не более 137 символов
+//Мое решение
+    function describeAge(age){let s="You're a(n)";return age<=12?s+" kid":age<=17?s+" teenager":age<=64?s+" adult":s+" elderly"}
+//Решение с кодевара
+    function describeAge(age) {
+      return "You're a(n) " + (age < 13 ? "kid" : age < 18 ? "teenager" : age < 65 ? "adult" : "elderly")
+    }
+
+    console.log(describeAge('30'))
+    
