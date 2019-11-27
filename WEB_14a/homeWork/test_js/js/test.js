@@ -1022,11 +1022,26 @@ function generateRange(min, max, step){
     //Вернуть строку в зависимости от возраста.
     //Длина функции не более 137 символов
 //Мое решение
-    function describeAge(age){let s="You're a(n)";return age<=12?s+" kid":age<=17?s+" teenager":age<=64?s+" adult":s+" elderly"}
+    /* function describeAge(age){let s="You're a(n)";return age<=12?s+" kid":age<=17?s+" teenager":age<=64?s+" adult":s+" elderly"} */
 //Решение с кодевара
-    function describeAge(age) {
+    /* function describeAge(age) {
       return "You're a(n) " + (age < 13 ? "kid" : age < 18 ? "teenager" : age < 65 ? "adult" : "elderly")
     }
 
-    console.log(describeAge('30'))
-    
+    console.log(describeAge('30')) */
+
+    // найти интеграл
+   /*  function integrate(coefficient, exponent) {
+      return `${coefficient / (exponent+1)}x^${exponent+1}`;
+    }
+    console.log(integrate(20, 1)); */
+
+    //Wolf and sheet's
+let queue = ["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"];
+    function warnTheSheep(queue) {
+       
+      return (queue.indexOf('wolf')+1) == queue.length ? "Pls go away and stop eating my sheep":
+       `Oi! Sheep number ${(queue.length-(queue.indexOf('wolf')+1))}! You are about to be eaten by a wolf!`;
+        
+    }
+    console.log(warnTheSheep(queue));
