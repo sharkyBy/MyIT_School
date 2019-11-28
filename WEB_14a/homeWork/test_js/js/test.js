@@ -1037,11 +1037,37 @@ function generateRange(min, max, step){
     console.log(integrate(20, 1)); */
 
     //Wolf and sheet's
-let queue = ["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"];
+/* let queue = ["sheep", "sheep", "sheep", "sheep", "sheep", "wolf", "sheep", "sheep"];
     function warnTheSheep(queue) {
        
       return (queue.indexOf('wolf')+1) == queue.length ? "Pls go away and stop eating my sheep":
        `Oi! Sheep number ${(queue.length-(queue.indexOf('wolf')+1))}! You are about to be eaten by a wolf!`;
         
     }
-    console.log(warnTheSheep(queue));
+    console.log(warnTheSheep(queue)); */
+
+    /* function swapValues(arr) {
+     
+      args = arr;
+      console.log(args);
+      var temp = args[0];
+      console.log(temp)
+      args[0] = args[1];
+      console.log(args[0]);
+      args[1] = temp;
+      console.log(args[1])
+      return (`args[0], ${args[0]}`);
+  }
+  console.log(swapValues([1,2])) */
+
+//В строке отбросить первую и последнюю буквы. Не беспокоиться о длине строки меньше 2 символов
+/* function removeChar(str){
+  // return str.split('').slice(1,str.length-1).join('');
+  // return str.substring(1,str.length-1);
+  return str.slice(1,-1); 
+ };
+ 
+console.log(removeChar('country')); */
+
+
+// let s=["Bilbo", "Gandalf", "Nazgul"].forEach('1');
