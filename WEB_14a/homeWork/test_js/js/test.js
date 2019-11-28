@@ -850,10 +850,7 @@ function bonusTime(salary, bonus) {
   console.log( bonusTime(salary,bonus)) */
 
  /*  function unusualFive() {
-    let str = charAt('a');
-    return str;
-    
-
+    return 'abcde'.length;
   }
 
   
@@ -1071,3 +1068,96 @@ console.log(removeChar('country')); */
 
 
 // let s=["Bilbo", "Gandalf", "Nazgul"].forEach('1');
+
+//
+/* function firstNonConsecutive (arr) {
+  return arr.reduce((a,b) => a + b);
+  }
+  console.log(firstNonConsecutive ([1,2,3,4,6,7])); */
+
+
+//Class work**************************************************************
+
+/* let obj = {
+  name: 'Valentin',
+  age: 46,
+  eyeColor: 'gray',
+} */
+
+/* for(key in obj){
+  console.log(key);
+};
+ */
+
+ /* function korni({a,b,c,...val}){
+    let x = (-b + (b**2 - 4 * a * c)**(1/2)) / (2 * a);
+    console.log(x);
+    console.log(a,b,c);
+    console.log(val);
+
+ } */
+// console.log(korni(1,4,4));
+
+/* 
+let obj={
+  a:1,
+  b:2,
+  c:1,
+  finish: true,
+}
+
+let timerID = setTimeout(korni, 1000, obj);
+clearTimeout(timerID); */
+
+//  setTimeout((({a,b,c,...val}) => {
+//   let x = (-b + (b**2 - 4 * a * c)**(1/2)) / (2 * a);
+//   console.log(x);
+//   console.log(a,b,c);
+//   console.log(val);
+   
+//  })(obj), 1000);
+
+/* function koren([a,b,c,...val]){
+  let x1 = (-b + (b**2 - 4 * a * c)**(1/2)) / (2 * a);
+  let x2 = (-b - (b**2 - 4 * a * c)**(1/2)) / (2 * a);
+    console.log(`x1 = ${x1}, `, `x2 = ${x2}`);
+    console.log(`a = ${a},  b = ${b}, c = ${c}`);
+    console.log(val);
+    
+
+}
+
+let timeID = setTimeout(koren, 1000,[1,2,1,4]); */
+
+// document.getElementById('btn');
+
+let call = document.getElementById('btn');  //вызов элемента
+let canc = document.getElementById('cancel'); //вызов элемента
+
+call.addEventListener('click', clickEvent); //вызов события "клик" для элемента
+canc.addEventListener('click', clickCancel);//вызов события "клик" для элемента
+
+//Функция, вызываемая при наступлении события
+function clickEvent(event){
+  console.log('Кнопка нажата');
+  call.style.visibility = 'hidden';
+  canc.style.visibility = 'visible'
+  setTimeout(consoleMessage,3000); //метод установки времени задержки выполнения функции
+  
+  // call.removeEventListener('click',clickEvent);
+  // console.log(event.target);
+}
+//Функция, вызываемая методом setTimeout
+function consoleMessage(){
+ console.log('Таймер выполнен');
+ call.style.backgroundColor ='#f2ffff';
+ call.style.visibility = 'visible'; 
+ canc.style.visibility = 'hidden';
+}
+//Функция, вызываемая при наступлении события
+function clickCancel(event){
+call.style.visibility = 'visible';
+
+}
+
+//  **************************************************************
