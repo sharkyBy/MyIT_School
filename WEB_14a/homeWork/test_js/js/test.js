@@ -1129,35 +1129,81 @@ clearTimeout(timerID); */
 
 let timeID = setTimeout(koren, 1000,[1,2,1,4]); */
 
-// document.getElementById('btn');
+// Создать 2 кнопки. При начании на кнопку 1, повляется сообщение
+//что кнопка нажата, появляется вторая кнопка, а первая исчезает
+//С установленной задержкой появляется надпись что таймер выполнен
+//Кнопка 1 появляется с другим цветом.
+//При нажатии на кнопку 2 таймер отменяется и кнопка 1 появляется, кнопка 2 исчезает
+//  *****************************
 
-let call = document.getElementById('btn');  //вызов элемента
+
+/* let call = document.getElementById('btn');  //вызов элемента
 let canc = document.getElementById('cancel'); //вызов элемента
 
 call.addEventListener('click', clickEvent); //вызов события "клик" для элемента
 canc.addEventListener('click', clickCancel);//вызов события "клик" для элемента
-
+let ID; */
 //Функция, вызываемая при наступлении события
-function clickEvent(event){
+/* function clickEvent(event){
   console.log('Кнопка нажата');
   call.style.visibility = 'hidden';
-  canc.style.visibility = 'visible'
-  setTimeout(consoleMessage,3000); //метод установки времени задержки выполнения функции
-  
+  canc.style.visibility = 'visible';
+  ID = setTimeout(consoleMessage,2000); //метод установки времени задержки выполнения функции
+   */
   // call.removeEventListener('click',clickEvent);
   // console.log(event.target);
-}
+// }
 //Функция, вызываемая методом setTimeout
-function consoleMessage(){
+/* function consoleMessage(){
  console.log('Таймер выполнен');
- call.style.backgroundColor ='#f2ffff';
+ call.style.backgroundColor ='blue';
+ call.style.color = 'white';
  call.style.visibility = 'visible'; 
- canc.style.visibility = 'hidden';
-}
+ canc.style.visibility = 'hidden'; */
+// }
 //Функция, вызываемая при наступлении события
-function clickCancel(event){
+/* function clickCancel(event){
 call.style.visibility = 'visible';
+canc.style.visibility = 'hidden';
+(clearTimeout(ID));
 
-}
+} */
 
 //  **************************************************************
+
+// home work **************************************************
+
+// console.log('ab,cde'.split(','));
+// console.log(['ab','Cde', 'Fgh'].join(''));
+// console.log([1,3,5,7,9].reduce((sum,current) => sum + current, 0))
+
+//Найти в массиве непоследовательные значения (отличающиеся больше чем на 1). Массив как 
+//минимум из 2х чиселюЧисла по возрастанию. Могут быть отрицательные. 
+//Могут быть все последвательныею
+
+// let arr = [ -4, -2, -1, 0, 1, 3, 4, 5 ];
+// let arr =[ 3, 5, 6, 7, 9, 11, 12 ]
+/* let arr = [1,2,3,4,6,7,8];
+
+function firstNonConsecutive (arr) {
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i] % 2 == arr[i+1] % 2){
+    return arr[i+1];
+    }
+  }
+  return null;
+  }
+
+firstNonConsecutive(arr);
+console.log(firstNonConsecutive(arr)); */
+
+//Убрать все пробелы в строке
+let x = '8 j 8   mBliB8g  imjB8B8  jl  B';
+
+function noSpace(x){
+  return x.split(' ').join('');
+}
+
+console.log(noSpace(x));
+
+// *******************************************************************
