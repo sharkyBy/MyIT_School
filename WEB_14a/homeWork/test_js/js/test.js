@@ -1178,7 +1178,7 @@ canc.style.visibility = 'hidden';
 // console.log([1,3,5,7,9].reduce((sum,current) => sum + current, 0))
 
 //Найти в массиве непоследовательные значения (отличающиеся больше чем на 1). Массив как 
-//минимум из 2х чиселюЧисла по возрастанию. Могут быть отрицательные. 
+//минимум из 2х чисел. Числа по возрастанию. Могут быть отрицательные. 
 //Могут быть все последвательныею
 
 // let arr = [ -4, -2, -1, 0, 1, 3, 4, 5 ];
@@ -1198,12 +1198,109 @@ firstNonConsecutive(arr);
 console.log(firstNonConsecutive(arr)); */
 
 //Убрать все пробелы в строке
-let x = '8 j 8   mBliB8g  imjB8B8  jl  B';
+/* let x = '8 j 8   mBliB8g  imjB8B8  jl  B';
 
 function noSpace(x){
   return x.split(' ').join('');
 }
 
-console.log(noSpace(x));
+console.log(noSpace(x)); */
 
 // *******************************************************************
+
+
+//quadratic equation
+
+/* function quadraticEquation(a,b,c){
+  let x; let x1; let x2; let D = Math.pow(b,2) - 4 * a * c;
+  return D < 0 ? 'Корней нет':
+  D === 0 ? `x = ${((-b) + Math.pow(D,0.5)) / (2 * a)}`: `x1 = ${((-b) + Math.pow(D,0.5)) / (2 * a)}, x2 = ${((-b) - Math.pow(D,0.5)) / (2 * a)}`;
+  
+}
+
+console.log(quadraticEquation(1,2,-2)) */
+
+//Вывести надписи в зависимости от величины массива
+
+/* function likes(names) {
+  return names.length == 0 ? `no one likes this`:
+         names.length == 1 ? `${names[0]} likes this`:
+         names.length == 2 ? `${names[0]} and ${names[1]} like this`:
+         names.length == 3 ? `${names[0]}, ${names[1]} and ${names[2]} like this`:
+         `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+  }
+  console.log(likes(['Alex', 'Jacob', 'Mark', 'Max'])); */
+
+  //Написать функцию шифрования, в которой каждая буква смещена на 13 позиций.
+  //Цифры и прочее оставить без изменения
+
+ /*  function rot13(message){
+    let newMessage ='';
+    for (let i = 0; i < message.length; i++){
+      let num = message.codePointAt(i);
+      num > 64 && num < 78 ||  num > 96 && num < 110 ? num += 13:
+      num > 77 && num < 91 ||  num > 109 && num < 123 ? num -= 13:
+      num = num;
+      newMessage = newMessage + String.fromCodePoint(num);   
+       
+    }
+    return newMessage;
+  }
+
+  console.log(rot13('abcdefghijklmnopqrstuvwxyz ')) */
+
+  //Написать функцию, которая заменяет повторячющиеся символы на ")",
+  // а не повторяющиеся на "("
+
+  /* function duplicateEncode(word){
+  let newWord = word.toLowerCase();
+  let str;  let letter;
+  for(let i=0; i < newWord.length; i++){
+    letter = newWord[i];
+  }
+  }
+
+console.log(duplicateEncode('wordww')) */
+
+// let str = 'metallica nirvana karavan  mandarin';
+// let pos=0; let ar=[];
+// for (let i = 0; i < str.length; i++){
+//   while(true){
+    
+//   }
+// }
+
+// console.log(ar);  let find = str.indexOf(str[i], pos);
+// if(find == -1) break;
+//   pos = find + 1;    
+//   ar.push(pos);  
+
+  function duplicateEncode(word){
+    let newWord = word.toLowerCase(); let str='';
+    for(let i=0; i < newWord.length; i++){
+      let char = newWord[i];
+      let cutStr = newWord.slice(i+1,newWord.length); 
+      console.log(cutStr, char);
+      cutStr.includes(char) ? str +=')': str += '(' ;
+    
+    }
+    return str;
+}
+
+console.log(duplicateEncode('Worddd'))
+
+/* function duplicateEncode(word){
+  let newWord = word.toLowerCase()+'_'; 
+  let str=''; 
+  let i = 0; 
+  let j = newWord.length;
+  while (i < j){
+    let char = newWord[i];
+    console.log(char);
+    newWord.includes(char,i+1) ? str +=')': str += '(' ;
+    i++;
+  }
+  return str;
+}
+
+console.log(duplicateEncode('Worddd')); */
