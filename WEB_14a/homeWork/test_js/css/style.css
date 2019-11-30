@@ -134,3 +134,34 @@ main, footer {
   visibility: hidden;
 
 }
+
+#section2{
+  width: 400px;
+  height: 800px;
+  border: 2px solid black;
+  margin: auto;
+  background-color: lightgray;
+
+}
+
+#section2 > h1{
+  width: 80%;
+  height: 50px;
+  background-color: blue;
+}
+
+#section2 > div{
+  width: 80%;
+  height: 200px;
+  background-color: brown;
+}
+
+#section2 > p{
+  width: 60%;
+  height:  100px;
+  background-color: cadetblue;
+}
+
+#section2 > input{
+
+}
