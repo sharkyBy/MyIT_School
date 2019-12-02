@@ -1278,6 +1278,8 @@ console.log(duplicateEncode('wordww')) */
   function duplicateEncode(word){
     let newWord = word.toLowerCase(); let str=''; let count = 0;
     
+  /* function duplicateEncode(word){
+    let newWord = word.toLowerCase(); let str='';
     for(let i=0; i < newWord.length; i++){
       let char = newWord[i];
       // let cutStr = newWord.slice(i+1,newWord.length); 
@@ -1286,7 +1288,70 @@ console.log(duplicateEncode('wordww')) */
       
     }
     // return str;
+    return str;
+} */
+
+// console.log(duplicateEncode())
+
+// *class work ********************************************
+
+/* let fun = setInterval(duplicateEncode,1000,'Worddd');
+
+clearInterval(fun); */
+
+
+/* let call = document.getElementById('btn_1');  //вызов элемента
+let canc = document.getElementById('btn_2'); //вызов элемента
+
+call.addEventListener('click', clickEvent); //вызов события "клик" для элемента
+canc.addEventListener('click', clickCancel);//вызов события "клик" для элемента
+let ID;  */
+//Функция, вызываемая при наступлении события
+/* function clickEvent(event){ */
+  // call.style.visibility = 'hidden';
+  /* ID = setInterval(consoleMessage,1000); */ //метод установки времени интервала выполнения функции
+  // canc.style.visibility = 'visible';
+  
+  
+  // call.removeEventListener('click',clickEvent);
+  // console.log(event.target);
+/* } */
+//Функция, вызываемая методом setTimeout
+/* function consoleMessage(){
+  call.style.position = 'relative';
+ call.style.visibility = 'visible'; 
+  */
+//  for (let i = 0; i < 400; i+=50){
+//   let pos = 0;
+//   call.style.left = `${pos}px`
+//  }
+ 
+ 
+//  canc.style.visibility = 'hidden';
+/* } */
+//Функция, вызываемая при наступлении события
+//  function clickCancel(event){
+// call.style.visibility = 'visible';
+// canc.style.visibility = 'hidden';
+// (clearTimeout(ID));
+
+// }
+
+
+//Запуск события с задержкой и с интервалом
+// *********
+/* setTimeout(fun1,2000);
+let count
+let time;
+function fun1(){
+  count = 2;
+  time = setInterval(fun2,1000);
 }
+function fun2(){
+  console.log('time')
+  count > 10 ? clearInterval(time): count++;
+} */
+// ***************
 
 console.log(duplicateEncode('reverse'))
 
@@ -1302,6 +1367,46 @@ console.log(duplicateEncode('reverse'))
     i++;
   }
   return str;
+/* function any(){
+  console.log("It is time")
+}
+setInterval() */
+
+/* setTimeout(function run() {
+  console.log("ssss")
+  setTimeout(run, 1000);
+}, 1000);
+ */
+
+/*  let call = document.getElementById('section2');
+ console.log(call);
+ call.addEventListener("click", Start,false);
+ function Start (event){
+   console.log(event.target.tagName)
+   switch (event.target.tagName){
+     case "H1":
+       console.log('askjgd')
+   }
+
+ } */
+
+//  function fun(event){
+// console.log(event)
+//  }
+
+
+ function Person(name, age, time){
+  this.name = name;
+  this.age = age;
+  this.time = time;
 }
 
-console.log(duplicateEncode('Worddd')); */
+
+// console.log(peter);
+
+let arr = [['Alex', 33, 22], ['Serg', 35, 66],['asd',45,45],["dfg",2,33]];
+for(let i=0; i < arr.length; i++){
+  let person = new Person(arr[i][0],arr[i][1], arr[i][2]);
+  console.log(person);
+}
+
