@@ -1276,18 +1276,19 @@ console.log(duplicateEncode('wordww')) */
 //   ar.push(pos);  
 
   function duplicateEncode(word){
-    let newWord = word.toLowerCase(); let str='';
+    let newWord = word.toLowerCase(); let str=''; let count = 0;
+    
     for(let i=0; i < newWord.length; i++){
       let char = newWord[i];
-      let cutStr = newWord.slice(i+1,newWord.length); 
-      console.log(cutStr, char);
-      cutStr.includes(char) ? str +=')': str += '(' ;
-    
+      // let cutStr = newWord.slice(i+1,newWord.length); 
+      // console.log(cutStr, char);
+      newWord.indexOf(char,count)  ? console.log(char, count +=1): false ;
+      
     }
-    return str;
+    // return str;
 }
 
-console.log(duplicateEncode('Worddd'))
+console.log(duplicateEncode('reverse'))
 
 /* function duplicateEncode(word){
   let newWord = word.toLowerCase()+'_'; 
