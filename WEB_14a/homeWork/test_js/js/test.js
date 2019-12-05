@@ -1490,7 +1490,7 @@ function clickToElementSection(ev){
   }
 }
  */
-let box = document.getElementById('box');
+/* let box = document.getElementById('box');
 console.log(box)
 box.addEventListener('click',boxMove);
 let sect = document.getElementById('section2'); // вызов блока
@@ -1505,12 +1505,145 @@ function boxMove() {
     console.log(x);
     if((x != parseInt(w) - 40)){
       box.style.left = `${x++}px`; 
-    }
-    
-  }
-  
+    }    
+  }  
   setInterval(run, 20);
 
+} */
+
+/* let sect = document.getElementById('section2'); // вызов блока
+let color = window.getComputedStyle(sect); //Получение свойства ширины блока
+console.log(color) */
+
+
+// home work ********************************
+// копирование объектов
+
+// let obj = {
+//   name: 'Dima',
+//   age: 34,
+// }
+// Ручное копирование ********************
+// let arrayProperty = Object.keys(obj); // копирование ключей (свойств)
+// console.log(arrayProperty);
+// let obj2 = {};
+// obj2.name = obj.name;
+// obj2.age = obj.age;
+// console.log(obj2);
+
+//Поверхностный способ копирования объектов ****************
+// let res = Object.assign({},obj)
+// console.log(res);
+// res.name = "Mix";
+// res.age = 44;
+// console.log(res, obj)
+
+// При наличии в качестве значения свойств встроенного объекта - изменении свойств скопированного объекта  изменяет и сам объект-родитель
+/* let newObj = {
+  name: 'Valik',
+  age:{
+    date:22,
+    year:1973,
+  }
+}
+console.log(newObj);
+
+let res = Object.assign({},newObj)
+res.age.date = 55;
+console.log(res); */
+
+//Глубокое копирование ******************
+//Переводит объект в строку, а затем обратно в объект
+/* let str = JSON.stringify(newObj);
+// console.log(str);
+let objStr = JSON.parse(str);
+objStr.age.date = 55;
+console.log(objStr); */
+
+// **************************
+
+//  "Склеивание" объектов ***************************
+/*  let newObj_1 = {
+  name: 'Valik',
+  age:{
+    date:22,
+    year:1973,
+  }
 }
 
+let newObj_2 = {
+  name: 'gray', //последующий объект заменяет значения повторяющихся свойств
+  height: 182,
+  weight: 105,
+  sex: 'man',
+}
+ 
+let objSum = Object.assign(newObj_1,newObj_2);
+console.log(objSum); */
+// **************************************************
 
+/* let obj_1 = {
+  name: 'Dima',
+  age: 34,
+}
+//Действия над объектами
+let arrKeys = Object.keys(obj_1); //Вывод массив свойств
+let arrValues = Object.values(obj_1); //Вывод массив значений
+let arrEntries = Object.entries(obj_1); //Преобразование в двумерный массив
+let arrFromEntries = Object.fromEntries(arrEntries);  //Преобразование двумерного массива в объект
+console.log(arrKeys, arrValues, arrEntries, arrFromEntries ); */
+
+
+//Деструктуризация
+/* let a = {
+  firstLastName:'Dima',
+  ageOfNumber:33,
+  eyeColorType: 'gray',
+} */
+// let {firstLastName, ageOfNumber,...Val} = a;
+
+/* f1(a);
+function f1({firstLastName:name, ageOfNumber:numbers = 222,...Val}){
+  console.log(name) 
+  console.log(Val)
+  console.log(numbers)
+}
+ */
+
+//Пример на объединение  объектов и вызов функций
+ /* let obj_1 = {
+    a: 2,
+    b: 3,
+    sum: function() { console.log(this.a + this.b)}
+ }
+
+ obj_1.sum();
+
+ let obj_2 = {
+    a: 4,
+    b: 5,
+    multiply: function() {console.log(this.a * this.b)}
+ }
+obj_2.multiply();
+
+let result = Object.assign(obj_1, obj_2);
+// console.log(result);
+result.sum(); 
+result.multiply();
+ */
+
+let newObj_1 = {
+  name: 'Greg', //последующий объект заменяет значения повторяющихся свойств
+  height: 182,
+  weight: 105,
+  reName: function(name){console.log(this.name = name)}// Функция меняет имя
+}
+
+let newObj_2 = Object.assign({},newObj_1); // копируем объект
+newObj_2.upperCase = function (){ // добавляем свойство аперкейс и в качестве значения функцию
+  this.name = this.name.toUpperCase();
+console.log(this.name);
+};
+console.log(newObj_2);
+newObj_2.reName('Mix'); // запускаем функцию по изменению имени
+newObj_2.upperCase(); // запуск функции по изменению на заглавные
