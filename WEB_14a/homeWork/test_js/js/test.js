@@ -419,40 +419,26 @@
 // console.log(bool);//true
 // console.log(typeof(bool));//boolean
 
-//Посчитать количество ямм пример с codewars 'Counting
+//Посчитать количество ямм пример с codewars 'Counting valleys'
 
 /* function countingValleys(s) {
-  let count=0; let str=0;
-     for(let i=0; i<s.length;i++){
-    console.log(s[i]);
-    switch(s[i]){     
-    case 'U': str = str + 1;   
-    break;
-    case 'F': str = str + 0;  
-    break;
-    case 'D': str = str - 1;  
-    break;
-    default: str = str + 0;  
-    break;     
-    }   
-
-    if(str > 0){count=0;
-    
-    }else if(str===0){
-      count=count+0;
+  let count = 0; let sum=0; 
+  let arr = s.split('').map((item) => {
+    item == 'U'? item = 1:
+    item == 'D'? item = -1: item = 0;
+  return item})
+  console.log(arr);
+  for (let i = 0; i < arr.length; i++){
+    sum += arr[i]; 
+    if(sum ==0 && sum - arr[i] < 0){
+      count++;
     }
-    else{
-      count = str+1; 
-    }
-    console.log(str,count);
-    
-    
   }
-  return count; 
+  return count;  
   }
 
-  let s='FFUDUUDDDDDFUFDUUUUU';
-  console.log(countingValleys(s)) */
+  console.log(countingValleys('UFFDDFDUDFUFUUFFDDFDUDFUFUDDFUU')) */
+
 
 
 //изменение регистра первой буквы слова
@@ -703,6 +689,8 @@ function dblClickSpan(event){
     event.target.style.color='blue'
   }
 } */
+//  ****************************
+
 
 //Метод reduce для получения суммы числовых элементов массива
 // let mass=['a','b',22,34,'e','f',3];
@@ -845,9 +833,8 @@ function bonusTime(salary, bonus) {
   bonus === true ? salary =`\u00A3`+ salary*10: salary =`\u00A3`+salary;
   return salary;
   }
-
-  bonusTime(salary,bonus);
   console.log( bonusTime(salary,bonus)) */
+
 
  /*  function unusualFive() {
     return 'abcde'.length;
@@ -1058,9 +1045,7 @@ function generateRange(min, max, step){
   console.log(swapValues([1,2])) */
 
 //В строке отбросить первую и последнюю буквы. Не беспокоиться о длине строки меньше 2 символов
-/* function removeChar(str){
-  // return str.split('').slice(1,str.length-1).join('');
-  // return str.substring(1,str.length-1);
+/* function removeChar(str){  
   return str.slice(1,-1); 
  };
  
@@ -1249,53 +1234,11 @@ console.log(quadraticEquation(1,2,-2)) */
 
   console.log(rot13('abcdefghijklmnopqrstuvwxyz ')) */
 
-  //Написать функцию, которая заменяет повторячющиеся символы на ")",
-  // а не повторяющиеся на "("
-
-  /* function duplicateEncode(word){
-  let newWord = word.toLowerCase();
-  let str;  let letter;
-  for(let i=0; i < newWord.length; i++){
-    letter = newWord[i];
-  }
-  }
-
-console.log(duplicateEncode('wordww')) */
-
-// let str = 'metallica nirvana karavan  mandarin';
-// let pos=0; let ar=[];
-// for (let i = 0; i < str.length; i++){
-//   while(true){
-    
-//   }
-// }
-
-// console.log(ar);  let find = str.indexOf(str[i], pos);
-// if(find == -1) break;
-//   pos = find + 1;    
-//   ar.push(pos);  
-
-  function duplicateEncode(word){
-    let newWord = word.toLowerCase(); let str=''; let count = 0;
-    
-  /* function duplicateEncode(word){
-    let newWord = word.toLowerCase(); let str='';
-    for(let i=0; i < newWord.length; i++){
-      let char = newWord[i];
-      // let cutStr = newWord.slice(i+1,newWord.length); 
-      // console.log(cutStr, char);
-      newWord.indexOf(char,count)  ? console.log(char, count +=1): false ;
-      
-    }
-    // return str;
-    return str;
-} */
-
-// console.log(duplicateEncode())
+  
 
 // *class work ********************************************
 
-/* let fun = setInterval(duplicateEncode,1000,'Worddd');
+/* let fun = setInterval(function,time,'argsForFunction');
 
 clearInterval(fun); */
 
@@ -1316,6 +1259,7 @@ let ID;  */
   // call.removeEventListener('click',clickEvent);
   // console.log(event.target);
 /* } */
+
 //Функция, вызываемая методом setTimeout
 /* function consoleMessage(){
   call.style.position = 'relative';
@@ -1353,20 +1297,7 @@ function fun2(){
 } */
 // ***************
 
-console.log(duplicateEncode('reverse'))
 
-/* function duplicateEncode(word){
-  let newWord = word.toLowerCase()+'_'; 
-  let str=''; 
-  let i = 0; 
-  let j = newWord.length;
-  while (i < j){
-    let char = newWord[i];
-    console.log(char);
-    newWord.includes(char,i+1) ? str +=')': str += '(' ;
-    i++;
-  }
-  return str;
 /* function any(){
   console.log("It is time")
 }
@@ -1395,18 +1326,184 @@ setInterval() */
 //  }
 
 
- function Person(name, age, time){
+/*  function Person(name, age, time){
   this.name = name;
   this.age = age;
   this.time = time;
 }
 
 
-// console.log(peter);
+console.log(peter);
 
-let arr = [['Alex', 33, 22], ['Serg', 35, 66],['asd',45,45],["dfg",2,33]];
+ let arr = [['Alex', 33, 22], ['Serg', 35, 66],['asd',45,45],["dfg",2,33]];
 for(let i=0; i < arr.length; i++){
   let person = new Person(arr[i][0],arr[i][1], arr[i][2]);
   console.log(person);
 }
+   */
+
+   //Написать функцию, которая заменяет повторячющиеся символы на ")",
+  // а не повторяющиеся на "("
+      //мое решение.....
+ /*  function duplicateEncode(word){
+    let newWord = word.toLowerCase(); 
+    let str=[]; let newStr =[];
+    for(let i = 0; i < word.length; i++){
+      let char = newWord[i];     
+      newWord.indexOf(char,i+1)  ? str.push(newWord.indexOf(char)): false;             
+    } 
+    newStr = str.filter((item, index) => item !== index);    
+    let x = Array.from(new Set(newStr)); // метод отбрасывает одинаковые элементы оставляя по 1 экземпляру одинаковых элементов
+    
+    for( let j = 0; j < x.length; j++){      
+      for(i = 0; i < str.length; i++){
+        if(x[j] == str[i]){
+          str[i] = ')'
+        }
+      }
+     
+    }
+    let res = str.map((item) => item == ')'? item:item = '(');
+
+    return res.join('');
+}
+
+console.log(duplicateEncode("recede")); */
+// .......
+
+//решение из кодевара.....
+/* function duplicateEncode(word){
+  return word
+    .toLowerCase()
+    .split('')
+    .map( function (a, i, w) {
+      return w.indexOf(a) == w.lastIndexOf(a) ? '(' : ')'
+      //  array     index       lastIndex
+      //    r         0             0
+      //    e         1             5
+      //    c         2             2
+      //    e         3             5
+      //    d         4             4
+      //    e         5             5
+    })
+    .join('');
+}
+console.log(duplicateEncode("recede")); */
+// ..................................
+
+
+
+//First non-repeating character (5kyu) (codewars.com)
+//Написать функцию, которая вернет ПЕРВЫЙ неповторяющийся символ в строке.
+//регистр не учитывать, но если пришел заглавный символ - вернуться должен тоже заглавный 
+
+/* function firstNonRepeatingLetter(s) {
+  let pos; let char; 
+  if(!!!s){// !!!s  - переменная undefined; !!s - переменная не undefined; 
+    return char = ``;
+  }
+   let str = s
+              .toLowerCase()
+              .split('')
+              .map((e,i,a) =>  a.indexOf(e) == a.lastIndexOf(e) ? i: e);
+              console.log(str)
+    
+    for (let i=0; i < str.length; i++){
+      if(typeof str[i] == 'number'){
+        pos = str[i];
+        char = s[pos];
+        break;      
+      } else  {
+        char = ``;        
+      }   
+    }
+     return char;
+}
+
+console.log(firstNonRepeatingLetter('')) */
+
+
+//Обработка события клик
+
+/* let section = document.getElementById('section2');
+console.log(section);
+section.addEventListener('click',clickToElementSection);
+
+function clickToElementSection(event){
+  function inputFun2(){
+    return event.target.style.fontSize = '13px';
+  }
+
+  function inputFun3(){    
+     event.target.style.fontSize = '20px';
+  }
+
+
+  console.log(event.target.tagName);
+  switch (event.target.tagName) {
+    case 'H1':
+      console.log('h1')
+      event.target.style.backgroundColor = "red";
+      break;
+    case 'DIV':
+        event.target.style.border = '1px solid black';
+        event.target.style.backgroundColor = 'green';
+      break;
+    case 'P':
+        event.target.style.backgroundColor = 'white';
+      break;
+    case 'INPUT':
+        // let fun1 = setInterval(() => event.target.style.fontSize = '13px',2000);
+        let fun2 = setInterval(inputFun2,2000);
+        let fun3 = setInterval(inputFun3,4000);
+        
+        event.target.style.color = 'yellow';
+        
+      break;
+  }
+return
+} */
+
+
+/* let section = document.getElementById('section2');
+console.log(section);
+section.addEventListener('click',clickToElementSection);
+
+function clickToElementSection(ev){
+  switch (ev.target.tagName) {
+    case 'H1':
+      console.log('h1');
+      break;
+    case 'DIV':
+      console.log('div');
+      break;
+    case 'P':
+      console.log('p');
+      break;
+    case 'INPUT':
+      console.log('input');
+      ev.target.style.color = 'white';
+      break;
+    case 'SECTION':
+      console.log('section');
+      break;
+  }
+}
+ */
+let box = document.getElementById('box');
+console.log(box)
+box.addEventListener('click',boxMove);
+
+let x = 0;
+function boxMove() {
+  console.log('click');
+  function run(x) {
+    console.log(x)
+    box.style.left = `${x++}px`;
+  }
+  
+  setInterval(run, 600);
+
+}
+
 
