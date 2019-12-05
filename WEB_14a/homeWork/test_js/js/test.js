@@ -1493,16 +1493,23 @@ function clickToElementSection(ev){
 let box = document.getElementById('box');
 console.log(box)
 box.addEventListener('click',boxMove);
+let sect = document.getElementById('section2'); // вызов блока
+let w = window.getComputedStyle(sect).width; //Получение свойства ширины блока
+console.log(w);
+console.log(parseInt(w))
 
 let x = 0;
 function boxMove() {
   console.log('click');
-  function run(x) {
-    console.log(x)
-    box.style.left = `${x++}px`;
+  function run() {
+    console.log(x);
+    if((x != parseInt(w) - 40)){
+      box.style.left = `${x++}px`; 
+    }
+    
   }
   
-  setInterval(run, 600);
+  setInterval(run, 20);
 
 }
 
