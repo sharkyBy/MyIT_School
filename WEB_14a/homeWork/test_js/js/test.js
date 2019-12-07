@@ -1516,7 +1516,7 @@ let color = window.getComputedStyle(sect); //Получение свойства
 console.log(color) */
 
 
-// home work ********************************
+// home work *******************************************************************
 // копирование объектов
 
 // let obj = {
@@ -1632,7 +1632,7 @@ result.sum();
 result.multiply();
  */
 
-let newObj_1 = {
+/* let newObj_1 = {
   name: 'Greg', //последующий объект заменяет значения повторяющихся свойств
   height: 182,
   weight: 105,
@@ -1646,4 +1646,34 @@ console.log(this.name);
 };
 console.log(newObj_2);
 newObj_2.reName('Mix'); // запускаем функцию по изменению имени
-newObj_2.upperCase(); // запуск функции по изменению на заглавные
+newObj_2.upperCase(); // запуск функции по изменению на заглавные */
+
+// *********************  end class work   *************************************
+
+let user = {
+  name: "Ivan",
+  familyName: "Ivanov",
+  yBirth:1973,
+  mBirth: 1,
+  nBirth: 22,
+  sumDay: function (year, month, day){
+    let userDate = `${this.yBirth = year}-${this.mBirth = month}-${this.nBirth = day}`;
+    userDate = Date.parse(userDate);
+    let nowDate= Date.now();
+    const oneDay = 1000 * 60 * 60 * 24 //Set one day in miliiseconds 
+    let dayD = Math.trunc((nowDate - userDate) / oneDay);   
+    console.log(dayD);
+    },
+  phone: '(+79) 123 456 789, (+79) 164 23 45 78',
+  address:{
+    country:'Russian',
+    city: "Saint Petersburg",
+    street:"Moscow highway",
+    houseNumber:'101',
+    local:'24',
+    postalCode: '240 589' ,
+  },  
+}
+user.sumDay(1974,05,8);
+
+
