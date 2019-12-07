@@ -1650,7 +1650,8 @@ newObj_2.upperCase(); // запуск функции по изменению н�
 
 // *********************  end class work   *************************************
 
-let user = {
+// ************************* home work *****************************************
+/* let user = {
   name: "Ivan",
   familyName: "Ivanov",
   yBirth:1973,
@@ -1675,5 +1676,107 @@ let user = {
   },  
 }
 user.sumDay(1974,05,8);
+console.log(user); */
 
+// ***************************** end home work *******************************
+
+//  **************************** class work **********************************
+
+// создание класса методами js
+
+/*let elemHTML = document.getElementById('exam');
+let newElem = document.createElement('span');
+newElem.className = 'span1 build float';      //1 способ добавления классов
+newElem.innerHTML='Welcom';
+elemHTML.appendChild(newElem); // Добавление узла в HTML страницу
+let massClass = newElem.classList;
+
+newElem.classList.add('grog', 'prog', 'drog'); //2способ добавления классов
+
+newElem.classList.remove('prog', 'drog');      //удаление классов
+
+newElem.classList.toggle('build');  // включить / выключить. Ставит класс в конец, 
+newElem.classList.toggle('hjgjhg');
+newElem.classList.toggle('build');
+let cont = newElem.classList.contains('span1')
+
+console.log(newElem, cont)          //Определяет наличие класса для элемента. Возвращает true or false
+
+
+elemHTML.appendChild(newElem);  //Вставляем элемент внутрь в конец
+elemHTML.prepend(newElem);      //Вставляем элемент внутрь в начало
+elemHTML.before(newElem);       // Вставляем элемент перед дивом
+elemHTML.after(newElem);        //Вставляем элемент после дива
+
+console.log(elemHTML); */
+
+
+let arr = ['Pit', 'Vaser', 'Nicolas'];
+
+let ul = document.createElement('ul');
+document.body.appendChild(ul);
+
+
+//1 способ
+/* for(let i = 0; i < arr.length; i++){
+  let li = document.createElement('li');
+  li.classList.add(`item${i+1}`);
+  li.innerHTML = arr[i];
+  ul.appendChild(li) ;
+} */
+
+//2 способ
+/* arr.map((val,i) => {
+  let li = document.createElement('li'); // создаем элемент для добавления
+  li.classList.add(`item${i+1}`); //присваиваем  класс элементу (класс описан заранее в CSS)
+  li.innerHTML = val; // присваиваем значение из массива
+  ul.appendChild(li) ; //добавляем в элемент ul
+})
+
+
+console.log(ul) 
+ */
+
+
+ let table = document.createElement('table');
+ let tr = document.createElement('tr')
+ 
+//  let td = document.createElement('td')
+ document.body.appendChild(table);
+ table.appendChild(tr);
+
+let tableData = {
+  tHead:{
+    name:"ФИО",
+    salary:"Ставка",
+    yearBirth: "Год рождения",
+    dateBirth: 'Дата рождения',    
+    amountOfChildren: 'Кол-во детей',
+    city:'Город',
+
+  },
+  massData:[
+    ['Дарский', 52500, 1986, "23 янв", 2, "Москва"],
+    ['Делягин', 38000, 1975, "23 янв", 1, "Москва"]
+  ]
+  
+}
+
+for(let el in tableData.tHead){
+  let th = document.createElement('th');
+  th.innerHTML = tableData.tHead[el];
+  tr.appendChild(th)
+}
+for(let i = 0; i < tableData.massData.length; i++){
+  let tr = document.createElement('tr');
+  tableData.massData[i].map((el, index) => {
+    let td = document.createElement('td');
+    td.innerHTML = el;
+    tr.appendChild(td);
+
+  })
+  table.appendChild(tr);
+}
+console.log(table)
+// for(let i=0; i<)
 

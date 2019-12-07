@@ -262,3 +262,40 @@ main, footer {
   width: 20%;
 }
 
+
+
+.span1{
+  display: block;
+  width: 200px;
+  height: 50px;
+  border: 2px solid black;
+  background-color: brown;
+}
+
+.build{
+  background-color: blue;
+}
+
+.float{
+  background-color: cornflowerblue;
+}
+
+.item1{
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  font-size: 20px;
+  color: red;
+}
+
+.item2{
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: blue;
+}
+
+.item3{
+  color: green;
+  font-size: 22px;
+
+}
