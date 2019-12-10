@@ -1711,10 +1711,10 @@ elemHTML.after(newElem);        //Вставляем элемент после �
 console.log(elemHTML); */
 
 
-let arr = ['Pit', 'Vaser', 'Nicolas'];
+/* let arr = ['Pit', 'Vaser', 'Nicolas'];
 
 let ul = document.createElement('ul');
-document.body.appendChild(ul);
+document.body.appendChild(ul); */
 
 
 //1 способ
@@ -1738,7 +1738,7 @@ console.log(ul)
  */
 
 
- let table = document.createElement('table');
+ /* let table = document.createElement('table');
  let tr = document.createElement('tr')
  
 //  let td = document.createElement('td')
@@ -1769,7 +1769,7 @@ for(let el in tableData.tHead){
 }
 for(let i = 0; i < tableData.massData.length; i++){
   let tr = document.createElement('tr');
-  tableData.massData[i].map((el, index) => {
+  tableData.massData[i].map((el) => {
     let td = document.createElement('td');
     td.innerHTML = el;
     tr.appendChild(td);
@@ -1777,6 +1777,55 @@ for(let i = 0; i < tableData.massData.length; i++){
   })
   table.appendChild(tr);
 }
-console.log(table)
-// for(let i=0; i<)
+console.log(table) */
+
+// ***************************** end of class work
+
+// **************************** home work ************************************
+
+//Создать объект, присвоив значения полей формы соответствующим полям объекта (создать объект из формы)
+
+
+ let form = document.getElementById('form'); //вызов формы
+ let formInput = form.querySelectorAll('input'); // получаю список инпутов
+
+ let keyPerson; // переменная для хранения имен инпутов (хрен знает зачем);
+ let propertyPerson; // переменная для хранения значений инпутов
+
+
+let inputSubmit = document.getElementById('submit');   // вызов кнопки сабмит
+let formSubmit = inputSubmit.addEventListener('click',userInfo);  // перехват события клик на кнопке сабмит
+userInfo(event) ; // вызов функции по обработке события клик
+
+function Person(){     // конструктор
+ 
+  this.name = propertyPerson[0];
+  this.fName = propertyPerson[1];
+  this.sex = propertyPerson[2];
+  this.birthday = propertyPerson[3];
+  this.numPhone = propertyPerson[4];
+  this.address = `${propertyPerson[10]}, ${propertyPerson[5]}, ${propertyPerson[6]}, ${propertyPerson[7]} ${propertyPerson[8]}, ap.${propertyPerson[9]}` ;
+}
+let user = new Person() // Вызов конструктора 
+console.log(user);
+
+// функция, вызываемая при наступлении события
+function userInfo(event){
+  keyPerson = []; //массив имен инпутов
+  propertyPerson = []; //массив значений инпутов
+  for(let i = 0; i < formInput.length - 1; i++){    
+     keyPerson[i] = formInput[i]['name'];        //перебор имен инпута и запихивание в массив
+     propertyPerson[i] = formInput[i]['value'];  // перебор значений инпутов и запихивание в массив
+                
+  }  
+ 
+ return propertyPerson; // возврат массива значений инпутов (как я надеялся....)
+}
+
+console.log(userInfo());  // ан нет.... хренушки
+console.log(event);
+
+
+
+
 

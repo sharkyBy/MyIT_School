@@ -30,27 +30,27 @@
                 Mollitia asperiores nostrum numquam dolorum esse magni 
                 quisquam tempore alias neque.</p>
         </div> -->
-        <form action="#" id = "form" name='userInformation' autocomplete="on">
+        <form action="#" id = "form" name='userInformation' >
             
            <fieldset >
                 <legend>Personal information</legend>
-               <label>*Name:<input type="text" id='name' autocomplete="on" placeholder="example: John" required></label>
-               <label>*Family name:<input type="text" id='familyName' autocomplete="off" required placeholder="example: Travolta"></label>               
-               <label> Sex:<input type="text" id='sex' autocomplete="on" placeholder="example: m (w)"></label>
-               <label >*Date: <input type="date" autocomplete="on" required> </label>
-               <label> *Phone: <input type="tel" autocomplete="on" required placeholder="example: 812-123-7894" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"> </label>
+               <label>*Name:<input type="text" name='first' form="form" placeholder="example: John" required></label>
+               <label>*Family name:<input type="text" name='family'  required  form="form" placeholder="example: Travolta"></label>               
+               <label> Sex:<input type="text" name='sex'  placeholder="example: m (w)" form="form"></label>
+               <label >*Date: <input type="text"  required name = "birthday" form="form"> </label>
+               <label> *Phone: <input type="text"  required name = "phone" form="form"> </label>
            </fieldset>
-           <fieldset>
+           <fieldset >
                <legend>Address</legend>
-               <label>Country:<input type="text" id='country' placeholder="USA" pattern="[A-Za-zА-Яа-яЁё0-9]"></label>
-               <label>City:<input type="text" id='city' placeholder="New York"></label>               
-               <label>Street:<input type="text" id='street' placeholder="25 Avenu"></label>
-               <label >House number: <input type="number" id= 'houseNumber' placeholder="122"></label>
-               <label >Apartment number: <input type="number" id= 'apartNumber' placeholder="1404"></label>
-               <label>Postal code: <input type="text" placeholder="124 224"> </label>
+               <label>Country:<input type="text" name='country' placeholder="USA" ></label>
+               <label>City:<input type="text" name='city' placeholder="New York"></label>               
+               <label>Street:<input type="text" name='street' placeholder="25 Avenu"></label>
+               <label >House number: <input type="number" name= 'houseNumber' placeholder="122"></label>
+               <label >Apartment number: <input type="number" name= 'apartNumber' placeholder="1404"></label>
+               <label>Postal code: <input type="text" name = "post" placeholder="124 224"> </label>
 
            </fieldset>
-           <input type="submit" id="submit" value="Submit">
+           <input type="submit" id="submit" value="Submit" form="form">
 
         </form>
     </main>
