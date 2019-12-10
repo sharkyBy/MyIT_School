@@ -34,11 +34,11 @@
             
            <fieldset >
                 <legend>Personal information</legend>
-               <label>*Name:<input type="text" name='first' form="form" placeholder="example: John" required></label>
-               <label>*Family name:<input type="text" name='family'  required  form="form" placeholder="example: Travolta"></label>               
-               <label> Sex:<input type="text" name='sex'  placeholder="example: m (w)" form="form"></label>
-               <label >*Date: <input type="text"  required name = "birthday" form="form"> </label>
-               <label> *Phone: <input type="text"  required name = "phone" form="form"> </label>
+               <label>*Name:<input type="text" name='first' required placeholder=" John" ></label>
+               <label>*Family name:<input type="text" required name='family'   placeholder=" Travolta"></label>               
+               <label> Sex:<input type="text" name='sex'  placeholder="m (w)" ></label>
+               <label >*Date: <input type="date"  required name = "birthday"> </label>
+               <label> *Phone: <input type="tel"  required name = "phone"  placeholder="122-123-122"> </label>
            </fieldset>
            <fieldset >
                <legend>Address</legend>
@@ -50,7 +50,7 @@
                <label>Postal code: <input type="text" name = "post" placeholder="124 224"> </label>
 
            </fieldset>
-           <input type="submit" id="submit" value="Submit" form="form">
+           <input type="submit" id="submit" value="Submit" form="form" onsubmit="return false">
 
         </form>
     </main>

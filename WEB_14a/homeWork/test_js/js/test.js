@@ -1785,46 +1785,45 @@ console.log(table) */
 
 //Создать объект, присвоив значения полей формы соответствующим полям объекта (создать объект из формы)
 
-
- let form = document.getElementById('form'); //вызов формы
- let formInput = form.querySelectorAll('input'); // получаю список инпутов
-
+ let arrObjects = []; 
  let keyPerson; // переменная для хранения имен инпутов (хрен знает зачем);
  let propertyPerson; // переменная для хранения значений инпутов
 
+ let form = document.getElementById('form').querySelectorAll('input'); //вызов формы, получение списка седекторов формы
+console.log('calling form inputs',form);
 
-let inputSubmit = document.getElementById('submit');   // вызов кнопки сабмит
-let formSubmit = inputSubmit.addEventListener('click',userInfo);  // перехват события клик на кнопке сабмит
-userInfo(event) ; // вызов функции по обработке события клик
+let inputSubmit = document.getElementById('submit').addEventListener('click',userInfo);   // вызов кнопки сабмит и обработка события на ней
+console.log('calling submit button and event handling', inputSubmit);
 
-function Person(){     // конструктор
- 
-  this.name = propertyPerson[0];
-  this.fName = propertyPerson[1];
-  this.sex = propertyPerson[2];
-  this.birthday = propertyPerson[3];
-  this.numPhone = propertyPerson[4];
-  this.address = `${propertyPerson[10]}, ${propertyPerson[5]}, ${propertyPerson[6]}, ${propertyPerson[7]} ${propertyPerson[8]}, ap.${propertyPerson[9]}` ;
-}
-let user = new Person() // Вызов конструктора 
-console.log(user);
+
+
+
 
 // функция, вызываемая при наступлении события
 function userInfo(event){
+  event && event.preventDefault(); // запрет обработки события явно (отправки формы по умолчанию)???????? наверно
   keyPerson = []; //массив имен инпутов
   propertyPerson = []; //массив значений инпутов
-  for(let i = 0; i < formInput.length - 1; i++){    
-     keyPerson[i] = formInput[i]['name'];        //перебор имен инпута и запихивание в массив
-     propertyPerson[i] = formInput[i]['value'];  // перебор значений инпутов и запихивание в массив
-                
+  for(let i = 0; i < form.length - 1; i++){    
+     keyPerson[i] = form[i]['name'];        //перебор имен инпута и запихивание в массив
+     propertyPerson[i] = form[i]['value'];  // перебор значений инпутов и запихивание в массив                
   }  
- 
- return propertyPerson; // возврат массива значений инпутов (как я надеялся....)
+  console.log('event', event); 
+  return  dataUser()  ; //вызов функции, запускающей конструктор
 }
 
-console.log(userInfo());  // ан нет.... хренушки
-console.log(event);
-
+function Person(){     // конструктор для создания объекта по данным формы
+  for(let i = 0; i < 5; i++){
+    this[keyPerson[i]] = propertyPerson[i]
+  }
+    this.address = `${propertyPerson[10]}, ${propertyPerson[5]}, ${propertyPerson[6]}, ${propertyPerson[7]} ${propertyPerson[8]}, ap.${propertyPerson[9]}` ;
+}
+//Функция запуска конструктора
+function dataUser(){
+  const user = new Person();
+  console.log('object user', user)
+  arrObjects.push(user);
+}
 
 
 
