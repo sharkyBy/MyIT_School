@@ -1796,9 +1796,6 @@ let inputSubmit = document.getElementById('submit').addEventListener('click',use
 console.log('calling submit button and event handling', inputSubmit);
 
 
-
-
-
 // функция, вызываемая при наступлении события
 function userInfo(event){
   event && event.preventDefault(); // запрет обработки события явно (отправки формы по умолчанию)???????? наверно

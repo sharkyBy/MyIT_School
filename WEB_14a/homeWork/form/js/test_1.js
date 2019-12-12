@@ -48,9 +48,6 @@ function formateUser() { // функция, вызывающая констру�
 
 
 console.log('user after init', user);
-
-
-
-console.log('func after init', userInfo());  // ан нет.... хренушки
+console.log('func after init', userInfo());  
 
 
