@@ -1737,13 +1737,17 @@ document.body.appendChild(ul); */
 console.log(ul) 
  */
 
+// Отрисовать таблицу используя методы js
 
- /* let table = document.createElement('table');
- let tr = document.createElement('tr')
+// Создание шапки таблицы ******************************************************
+ /* let table = document.createElement('table'); // создаем оболочку - таблицу
+ let tr = document.createElement('tr'); // создаем строку для добавдения
  
-//  let td = document.createElement('td')
- document.body.appendChild(table);
- table.appendChild(tr);
+//  let td = document.createElement('td') // создаем ячейку для добавления
+ document.body.appendChild(table);  // вставляем таблицу в разметку body
+ table.appendChild(tr); // вставляем строку
+
+ // элементы шапки созданы ******************************************************
 
 let tableData = {
   tHead:{
@@ -1785,7 +1789,7 @@ console.log(table) */
 
 //Создать объект, присвоив значения полей формы соответствующим полям объекта (создать объект из формы)
 
- let arrObjects = []; 
+/*  let arrObjects = []; 
  let keyPerson; // переменная для хранения имен инпутов (хрен знает зачем);
  let propertyPerson; // переменная для хранения значений инпутов
 
@@ -1821,7 +1825,109 @@ function dataUser(){
   console.log('object user', user)
   arrObjects.push(user);
 }
+ */
+ // *************************************** end home work  ***********************************************************************
+
+ // *************************************** class work  **************************************************************************
+
+ /* let ul = document.getElementById('ul'); //вызов элемента ul, в который будут добавляться элементы
+ let fr = document.createDocumentFragment(); // создание оболочки для добавление в элемент
+ for(let i = 0; i < 5; i++){
+   let li = document.createElement("li"); // создание элемента для добавления
+   fr.appendChild(li);   //добавляем элемент в оболочку
+ }
+ console.log(ul);
+ ul.appendChild(fr); // добавляем оболочку в вызванный блок
+ */
+
+/* let user = {
+  name: 'John',
+  age: 22,
+  eyeColor:'black',
+} */
 
 
+/* //создаем конструктор
+function Constructor(name, age, color){
+  this.name = name;
+  this.age = age;
+  this.eyeColor = color;
+}
+//создаем протопип конструктора, который будет относится ко всем объектам (один на всех)
+Constructor.prototype.reName = function reName(rename){
+  this.name = rename;
+}
+//создаем объект с посощью конструктора
+let user = new Constructor('Dima', 22, 'gray');
+user.reName('Nicolas'); // запускаем прототип конструктора, который уже относится ко всем объектам
+ */
 
+/*  let arr = ['Open', 'Close', 'Submit'];
+console.log(window);
+ 
+for (let i = 0; i < arr.length; i++){
+   let btn = document.createElement('input');
+      btn.type = 'button';
+      btn.className = "button";
+      btn.value = arr[i];
+      btn.__proto__.click = function(){
+        this.style.color = "red";
 
+      }
+   document.body.appendChild(btn);
+   
+}
+document.body .addEventListener("click",function(event){
+  if(event.target.tagName==="INPUT"){
+    console.log("fff");
+    event.target.click();
+  }
+
+}) */
+
+// Класс **************************************
+/* class Name{
+  constructor(name, age){
+    this.name = name;
+    this.age = age;
+  }
+    click (){
+      return `${this.name} ${this.age} `
+    }
+}
+
+ let person = new Name('Mike',48);
+ console.log(person);
+ let str = person.click()
+ console.log(str); */
+ 
+// Калькулятор ***************************************
+// Создаем класс, в котором создаем конструктор и методы вычисления
+ class Calc{
+   constructor(a,b){                             // конструктор
+     this.val1 = a;
+     this.val2 = b;
+   }
+   summ(){                                       // методы
+     return this.val1 + this.val2;
+   }
+   multi(){
+     return this.val1 * this.val2;
+   }
+   diff(){
+     return this.val1 - this.val2;
+   }
+   divis(){
+     return this.val1 / this.val2;
+   }
+ }
+
+ // Создаем функцию , которая создаст новый объект на основе класса с аргументами (2 числа и метод действий с числами)
+function calc(val1, val2, type){
+  let calc = new Calc(val1, val2);
+  let res = calc[type](); // выбираем метод для действий с числами
+  return res;
+}
+
+console.log(calc(3,5,'diff'))
+// **********************************************

@@ -42,7 +42,7 @@
            </fieldset>
            <fieldset >
                <legend>Address</legend>
-               <label>Country:<input type="text" name='country' placeholder="USA" ></label>
+               <label>Country:<input type="text" name='country' placeholder="USA" required pattern="[a-zA-Z]" ></label>
                <label>City:<input type="text" name='city' placeholder="New York"></label>               
                <label>Street:<input type="text" name='street' placeholder="25 Avenu"></label>
                <label >House number: <input type="number" name= 'houseNumber' placeholder="122"></label>
@@ -89,5 +89,8 @@
         <div id="exam">
 
         </div>
+        <ul id = 'ul'>
+
+        </ul>
 </body>
 </html>
