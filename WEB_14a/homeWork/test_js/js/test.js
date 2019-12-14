@@ -1422,7 +1422,7 @@ console.log(duplicateEncode("recede")); */
 
 console.log(firstNonRepeatingLetter('')) */
 
-
+// *********************************** class work ************************************
 //Обработка события клик
 
 /* let section = document.getElementById('section2');
@@ -1490,6 +1490,9 @@ function clickToElementSection(ev){
   }
 }
  */
+
+// ******************************** end of class work ***************************************
+
 /* let box = document.getElementById('box');
 console.log(box)
 box.addEventListener('click',boxMove);
@@ -1531,14 +1534,15 @@ console.log(color) */
 // obj2.age = obj.age;
 // console.log(obj2);
 
-//Поверхностный способ копирования объектов ****************
-// let res = Object.assign({},obj)
-// console.log(res);
-// res.name = "Mix";
-// res.age = 44;
-// console.log(res, obj)
+// *********** Поверхностный способ копирования объектов ****************
+/* let res = Object.assign({},obj)
+console.log(res);
+res.name = "Mix";
+res.age = 44;
+console.log(res, obj) */
 
-// При наличии в качестве значения свойств встроенного объекта - изменении свойств скопированного объекта  изменяет и сам объект-родитель
+// При наличии в качестве значения свойств встроенного объекта - изменении свойств 
+// скопированного объекта  изменяет и сам объект-родитель
 /* let newObj = {
   name: 'Valik',
   age:{
@@ -1549,10 +1553,11 @@ console.log(color) */
 console.log(newObj);
 
 let res = Object.assign({},newObj)
-res.age.date = 55;
+res.age.date = 17;                            // изменяет дату в обоих объектах
+res.name = 'Smile'                            // изменяет имя только в объекте 'res'
 console.log(res); */
 
-//Глубокое копирование ******************
+// ************** Глубокое копирование ******************
 //Переводит объект в строку, а затем обратно в объект
 /* let str = JSON.stringify(newObj);
 // console.log(str);
@@ -1651,14 +1656,16 @@ newObj_2.upperCase(); // запуск функции по изменению н�
 // *********************  end class work   *************************************
 
 // ************************* home work *****************************************
+//Создать объект "пользователь", написать функцию, которая вычисляет количество прожитых им дней с даты рождения
+
 /* let user = {
   name: "Ivan",
   familyName: "Ivanov",
   yBirth:1973,
   mBirth: 1,
-  nBirth: 22,
+  dBirth: 22,
   sumDay: function (year, month, day){
-    let userDate = `${this.yBirth = year}-${this.mBirth = month}-${this.nBirth = day}`;
+    let userDate = `${this.yBirth = year}-${this.mBirth = month}-${this.dBirth = day}`;
     userDate = Date.parse(userDate);
     let nowDate= Date.now();
     const oneDay = 1000 * 60 * 60 * 24 //Set one day in miliiseconds 
@@ -1678,29 +1685,86 @@ newObj_2.upperCase(); // запуск функции по изменению н�
 user.sumDay(1974,05,8);
 console.log(user); */
 
+// ******* Создать объект "пользователь", написать функцию, которая вычисляет количество прожитых им дней с даты рождения
+// с использованием класса
+/* let user;
+class UserCreate{
+  //Конструктор объекта 'пользователь'
+  constructor(name, fName, year, month, day, phone, country, city, street, hNum, ap, post,){
+    this.name = name;
+    this.fName = fName;
+    this.yBirth = year;
+    this.mBirth = month;
+    this.dBirth = day;
+    this.phone = phone;
+    this.address = {};
+    this.address.country = country;      
+    this.address.city = city;
+    this.address.street = street;
+    this.address.houseNumber = hNum;
+    this.address.appartment = ap;
+    this.address.postalCode = post;
+  }
+  sumDay (){  //Метод подсчета количества дней прожитых на с даты рождения на текущий момент
+    let userDate = Date.parse( `${this.yBirth}-${this.mBirth}-${this.dBirth }`);    
+    let nowDate = Date.now();
+    const oneDay = 1000 * 60 * 60 * 24 //Set one day in miliiseconds      
+    return Math.trunc((nowDate - userDate) / oneDay);  
+  };
+  }
+//функция, запускающая выполнение класса (создание объекта (конструктор) и подсчет кол - ва дней(метод))
+function callUserCreate( sumDay){
+  user = new UserCreate('Valentin','Petrenko', 1973, 01, 22, '(+375) 29 721 82 80', 'Belarus','Brest', 'Gagarina', 93, '', 224009);
+  user[sumDay];  //вызов метода подсчета кол -ва прожитых  пользователем дней
+ }
+ callUserCreate();
+ console.log('object', user); 
+ console.log('dDay', user.sumDay()); */
+ 
+
+
+/* let user = {
+  name: "Ivan",
+  familyName: "Ivanov",
+  yBirth:1973,
+  mBirth: 1,
+  dBirth: 22,
+  phone: '(+79) 123 456 789, (+79) 164 23 45 78',
+  address:{
+    country:'Russian',
+    city: "Saint Petersburg",
+    street:"Moscow highway",
+    houseNumber:'101',
+    local:'24',
+    postalCode: '240 589' ,
+  },  
+}
+ */
+
+
 // ***************************** end home work *******************************
 
 //  **************************** class work **********************************
 
-// создание класса методами js
+// ****************** создание класса методами js объектам DOM **********************
 
 /*let elemHTML = document.getElementById('exam');
 let newElem = document.createElement('span');
-newElem.className = 'span1 build float';      //1 способ добавления классов
+newElem.className = 'span1 build float';      // 1 способ добавления классов
 newElem.innerHTML='Welcom';
-elemHTML.appendChild(newElem); // Добавление узла в HTML страницу
+elemHTML.appendChild(newElem);                 // Добавление узла в HTML страницу
 let massClass = newElem.classList;
 
-newElem.classList.add('grog', 'prog', 'drog'); //2способ добавления классов
+newElem.classList.add('grog', 'prog', 'drog'); // 2способ добавления классов
 
-newElem.classList.remove('prog', 'drog');      //удаление классов
+newElem.classList.remove('prog', 'drog');      // удаление классов
 
-newElem.classList.toggle('build');  // включить / выключить. Ставит класс в конец, 
+newElem.classList.toggle('build');             // включить / выключить. Ставит класс в конец, 
 newElem.classList.toggle('hjgjhg');
 newElem.classList.toggle('build');
 let cont = newElem.classList.contains('span1')
 
-console.log(newElem, cont)          //Определяет наличие класса для элемента. Возвращает true or false
+console.log(newElem, cont)                    // Смотрим наличие класса для элемента. Возвращает true or false
 
 
 elemHTML.appendChild(newElem);  //Вставляем элемент внутрь в конец
@@ -1710,47 +1774,44 @@ elemHTML.after(newElem);        //Вставляем элемент после �
 
 console.log(elemHTML); */
 
+//  **************  Создать элементы списка, назначить класс и добавить в DOM   ********************
 
-/* let arr = ['Pit', 'Vaser', 'Nicolas'];
+/* let arr = ['Pit', 'Vaser', 'Nicolas'];       // Исходный массив значений li
 
-let ul = document.createElement('ul');
-document.body.appendChild(ul); */
+let ul = document.createElement('ul');          // Создаем ul
+document.body.appendChild(ul); */               // Добавляем ul в DOM
 
-
-//1 способ
-/* for(let i = 0; i < arr.length; i++){
-  let li = document.createElement('li');
-  li.classList.add(`item${i+1}`);
-  li.innerHTML = arr[i];
-  ul.appendChild(li) ;
-} */
-
-//2 способ
+//********* Создание и добавление элементов списка  *****************
+// ****** 1 способ  в цикле for ***********
+ /* for (let i = 0; i < arr.length; i++){
+  let li = document.createElement('li');      // создаем элемент списка
+  li.classList.add(`item${i+1}`);             // задаем класс объекта li
+  li.innerHTML = arr[i];                      // Записываем текст в элемент li
+  ul.appendChild(li) ;                        // Добавляем в ul элемент li
+}; */
+ 
+// ******** 2 способ  с помощью метода map **********
 /* arr.map((val,i) => {
-  let li = document.createElement('li'); // создаем элемент для добавления
-  li.classList.add(`item${i+1}`); //присваиваем  класс элементу (класс описан заранее в CSS)
-  li.innerHTML = val; // присваиваем значение из массива
-  ul.appendChild(li) ; //добавляем в элемент ul
-})
-
-
+  let li = document.createElement('li');     // создаем элемент для добавления
+  li.classList.add(`item${i+1}`);            // присваиваем  класс элементу (класс описан заранее в CSS)
+  li.innerHTML = val;                        // присваиваем значение из массива
+  ul.appendChild(li) ;                       // добавляем в элемент ul
+});
 console.log(ul) 
  */
 
-// Отрисовать таблицу используя методы js
+// ***************** Отрисовать таблицу используя методы js ***********************************
 
-// Создание шапки таблицы ******************************************************
- /* let table = document.createElement('table'); // создаем оболочку - таблицу
- let tr = document.createElement('tr'); // создаем строку для добавдения
+// ***************Создание шапки таблицы *********************
+ /* let table = document.createElement('table');    // создаем оболочку - таблицу
+ let tr = document.createElement('tr');             // создаем строку для добавдения
  
-//  let td = document.createElement('td') // создаем ячейку для добавления
- document.body.appendChild(table);  // вставляем таблицу в разметку body
- table.appendChild(tr); // вставляем строку
-
- // элементы шапки созданы ******************************************************
+//  let td = document.createElement('td')           // создаем ячейку для добавления
+ document.body.appendChild(table);                  // вставляем таблицу в разметку body
+ table.appendChild(tr);                             // вставляем строку 
 
 let tableData = {
-  tHead:{
+  tHead:{                                           // шапка таблицы
     name:"ФИО",
     salary:"Ставка",
     yearBirth: "Год рождения",
@@ -1759,28 +1820,30 @@ let tableData = {
     city:'Город',
 
   },
-  massData:[
+  massData:[                                        // массив строк таблицы
     ['Дарский', 52500, 1986, "23 янв", 2, "Москва"],
-    ['Делягин', 38000, 1975, "23 янв", 1, "Москва"]
-  ]
-  
+    ['Делягин', 38000, 1975, "23 янв", 1, "Москва"],
+    ['Дирский', 42000, 1977, "12 мар", 0, "Москва"]
+  ]  
 }
 
 for(let el in tableData.tHead){
-  let th = document.createElement('th');
-  th.innerHTML = tableData.tHead[el];
-  tr.appendChild(th)
+  let th = document.createElement('th');             // создаем ячейку для шапки
+  th.innerHTML = tableData.tHead[el];                // записываем имя, которое берем из значения свойства объекта tHead 
+  tr.appendChild(th)                                 // добавляем ячейку
 }
+// элементы шапки созданы ******************************************************
+
 for(let i = 0; i < tableData.massData.length; i++){
-  let tr = document.createElement('tr');
-  tableData.massData[i].map((el) => {
-    let td = document.createElement('td');
-    td.innerHTML = el;
-    tr.appendChild(td);
+  let tr = document.createElement('tr');            // создаем строку таблицы
+  tableData.massData[i].map((el) => {               // перебираем элемент массива massData
+    let td = document.createElement('td');          // создаем ячейку строки
+    td.innerHTML = el;                              // записываем значения из элемента(массива) массива massData в ячейку
+    tr.appendChild(td);                             // в строку добавляем ячейку
 
   })
-  table.appendChild(tr);
-}
+  table.appendChild(tr);                            // добавляем строку в таблицу
+} 
 console.log(table) */
 
 // ***************************** end of class work
@@ -1840,11 +1903,6 @@ function dataUser(){
  ul.appendChild(fr); // добавляем оболочку в вызванный блок
  */
 
-/* let user = {
-  name: 'John',
-  age: 22,
-  eyeColor:'black',
-} */
 
 
 /* //создаем конструктор
@@ -1862,30 +1920,35 @@ let user = new Constructor('Dima', 22, 'gray');
 user.reName('Nicolas'); // запускаем прототип конструктора, который уже относится ко всем объектам
  */
 
-/*  let arr = ['Open', 'Close', 'Submit'];
+ //Сделать 3 кнопки, по клику на любой из них поменять цвет надписей *****************************************
+
+/*  let arr = ['Open', 'Close', 'Submit'];       // Названия кнопок
 console.log(window);
- 
+ //цикл по созданию кнопок 
 for (let i = 0; i < arr.length; i++){
-   let btn = document.createElement('input');
-      btn.type = 'button';
-      btn.className = "button";
-      btn.value = arr[i];
-      btn.__proto__.click = function(){
-        this.style.color = "red";
+   let btn = document.createElement('input');  // создаем кнопку
+      btn.type = 'button';                     // назначаем тип кнопки
+      btn.className = "button";                // назначаем класс кнопки
+      btn.value = arr[i];                      // присваиваем значение кнопке (имя что будет отображаться на кнопке)
+      btn.__proto__.click = function(){        // создаем метод 'click' по изменению цвета при нажатии на кнопку 
+        this.style.color = "red";              // и помещаем  в прототип объекта
 
       }
-   document.body.appendChild(btn);
-   
+   document.body.appendChild(btn);             // добавляем кнопки (узел) в тело документа    
 }
-document.body .addEventListener("click",function(event){
-  if(event.target.tagName==="INPUT"){
+
+document.body.addEventListener("click",function(event){ // создаем обработчик события "click"
+  if(event.target.tagName === "INPUT"){
     console.log("fff");
-    event.target.click();
-  }
+    event.target.click();                              // запускаем метод 'click'  }
 
 }) */
+// ******************************* end **********************************************************************
+
 
 // Класс **************************************
+// Класс - шаблон для создания конструктора и методов объекта
+// Методы классов сохраняются в "Имя.prototype." и доступны для всех объектов созданных конструктором "Имя"
 /* class Name{
   constructor(name, age){
     this.name = name;
@@ -1903,7 +1966,7 @@ document.body .addEventListener("click",function(event){
  
 // Калькулятор ***************************************
 // Создаем класс, в котором создаем конструктор и методы вычисления
- class Calc{
+/*  class Calc{
    constructor(a,b){                             // конструктор
      this.val1 = a;
      this.val2 = b;
@@ -1929,5 +1992,15 @@ function calc(val1, val2, type){
   return res;
 }
 
-console.log(calc(3,5,'diff'))
+console.log(calc(3,5,'diff')) */
 // **********************************************
+
+//Проверка на наличие ключей в объекте
+/* let obj = {
+  // name: 'pit',
+  // age:30,
+};
+console.log(Object.keys(obj).length === 0 ? true: false);     // проверка на наличие ключей в объекте
+ */
+// ************************************************************
+
